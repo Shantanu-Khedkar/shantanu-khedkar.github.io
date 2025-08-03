@@ -8,9 +8,9 @@ Variable Definitions
 
   --top-nav:rgba(255, 246, 240, 0.168);
   --nav-btn: rgba(255, 246, 240, 0.168);
-  --nav-btn-icon: #2d2828;
+  --nav-btn-icon: #140a00;
   --nav-btn-icon-i: #ff7800;
-  --nav-btn-label: #fff6f0;
+  --nav-btn-label: #fff7ef;
 }
 
 /*
@@ -46,14 +46,18 @@ body {
 .top-nav-wrapper{
   display: flex; 
   justify-content: center;
+  position: sticky;
+  top:10px;
+  bottom:10px;
+  margin-top:-30px;
+  margin-bottom: -30px;
 }
 
 /* Main nav element */
 
 .top-nav {
   height: max-content;
-  position: sticky;
-  margin-top: 5px;
+  position: relative;
   width: 98%;
   min-height: 60px;
   display: inline-flex;
@@ -121,9 +125,26 @@ color: var(--nav-btn-icon-i)
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
+.flipped .nav-opt{
+  top:unset;
+  bottom:55px; /* Magic number */
+  padding:10px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  border-radius: 30px 30px 0px 0px; /* 60px/2 */
+}
 .responsive-nav .nav-opt .nav-btn:nth-of-type(4){
   border-radius:10px 10px 25px 25px /* 60px-5px-5px/2 */
 }
+
+.flipped .nav-opt .nav-btn:nth-of-type(4){
+  border-radius:10px 10px 10px 10px /* 60px-5px-5px/2 */
+}
+
+.flipped .nav-opt .nav-btn:nth-of-type(1){
+  border-radius:25px 25px 10px 10px /* 60px-5px-5px/2 */
+}
+
 .responsive-nav .nav-btn{
   width:calc(100% - 10px); /* 5px gutters */
   border-radius: 10px; 
@@ -205,4 +226,10 @@ color: var(--nav-btn-icon-i)
 }
 
 
-
+section{
+  display: flex;
+  padding:10px;
+  height:100vh;
+  background-color: #343434;
+  
+}
