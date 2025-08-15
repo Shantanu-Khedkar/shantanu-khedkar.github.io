@@ -3,16 +3,13 @@
 Variable Definitions
 */
 :root {
-  --blue: #1e90ff;
-  --white: #ffffff;
 
   --top-nav:rgba(179, 179, 179, 0.168);
   --nav-btn: rgba(252, 252, 252, 0.168);
-  --nav-btn-icon: #000000;
-  --nav-btn-icon-i: #ff7800;
-  --hero-cta: #ff7800;
-  --nav-btn-label: white;
-  --hero-text: white;
+  --tertiary: #000000;
+  --primary: #ff7800;
+  --primary-text:white;;
+  --background-image:url("./assets/backgroundDark.jpeg");
   --blur:10px
 }
 
@@ -78,7 +75,7 @@ body {
   margin-right: -48px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./assets/LogoThemed.png");
+  background-image: url("./assets/LogoThemed2.svg");
 }
 
 .menu-btn {
@@ -90,7 +87,7 @@ body {
   border-radius: 100px;
   width: 48px;
   justify-content: center;
-  background-color: var(--nav-btn-icon);
+  background-color: var(--tertiary);
   backdrop-filter:blur(calc(var(--blur) - 4px));
 }
 
@@ -98,7 +95,7 @@ body {
   align-content: center;
 height: auto;
 font-size:1.5em;
-color: var(--nav-btn-icon-i);
+color: var(--primary);
 }
 
 /* Navbar Options, wrapper for nav-btn, changes for responsive behaviour */
@@ -174,7 +171,7 @@ aspect-ratio: 1/1;
 width:2em;
 padding:4px;
 border-radius: 100px;
-  background-color: var(--nav-btn-icon);
+  background-color: var(--tertiary);
     
   display:flex;
   justify-content: center;
@@ -184,12 +181,12 @@ border-radius: 100px;
 align-content: center;
 height: auto;
 font-size:1.5em ; /* Fontawesome font-size * 1.5*/
-color: var(--nav-btn-icon-i)
+color: var(--primary)
 }
 
 /* Button Text */
 .nav-btn-label{
-  color: var(--nav-btn-label);
+  color: var(--primary-text);
   margin-right:20px;
   font-size: large;
   font-family: Arial, sans-serif;
@@ -250,19 +247,20 @@ section{
 }
 
 .hero-section{
-        background-image:url('assets/background.jpeg');
+  
+      background-image:var(--background-image);
       background-repeat: no-repeat;
       background-size:cover;
       margin-bottom: 0px;
       display: flex;
+      flex-wrap: wrap;
       height:calc(100vh + 30px);
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
 }
 
 .hero-subsection{
-  width:50%;
-  height:100%;
+  flex-grow: 1;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -270,8 +268,10 @@ section{
   padding:10px;
   text-align: center;
 }
+
+
 .hero-section div:nth-of-type(1){
-  color: var(--hero-text);
+  color: var(--primary-text);
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif
 }
@@ -296,9 +296,37 @@ margin:10px;
   padding:10px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: var(--hero-cta);
+  background-color: var(--primary);
   border-radius: 100px;
   font-size: 24px;
   font-weight: bolder;
   
+}
+
+.module-container{
+  width:500px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  perspective: 1600px;
+}
+.module-screen{
+  width:400px;
+  aspect-ratio: 16/9;
+  height:auto;
+  background-color: black;
+  transform-origin: 50% 100%;
+  transform: rotate3d(1, 0, 0, 0deg)
+  
+}
+.module-keyboard{
+  width:400px;
+  aspect-ratio: 16/9;
+  height:auto;
+  background-color: #AAAAAA;
+  transform-origin: 50% 0%;
+  transform: rotate3d(1, 0, 0, 80deg)
+ 
 }
