@@ -188,7 +188,7 @@ color: var(--primary)
 .nav-btn-label{
   color: var(--primary-text);
   margin-right:20px;
-  font-size: large;
+  font-size: 18px;
   font-family: Arial, sans-serif;
   font-weight: bold;
   align-content: center;
@@ -270,13 +270,17 @@ section{
 }
 
 
-.hero-section div:nth-of-type(1){
+.hero-subsection:nth-of-type(1){
   color: var(--primary-text);
-  font-size: x-large;
+  
   font-family: Arial, Helvetica, sans-serif
 }
 .hero-subsection h1{
   margin: 0px;
+  font-size: 48px;
+}
+.hero-subsection h2{
+  font-size: 32px;
 }
 .hero-subsection h2:nth-of-type(1)::after{
 content: "•";
