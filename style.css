@@ -91,7 +91,7 @@ body {
   justify-content: center;
   background-color: var(--tertiary);
   backdrop-filter:blur(calc(var(--blur) - 4px));
-  -webkit-backdrop-filter:blur(calc(var(--blur) - 4px));
+  -webkit-backdrop-filter:blur(6px);
 }
 
 .menu-btn i{
@@ -131,7 +131,7 @@ color: var(--primary);
   padding-top: 0px;
   background-color: var(--top-nav);
   backdrop-filter:blur(var(--blur));
--webkit-backdrop-filter:blur(var(--blur));
+  -webkit-backdrop-filter:blur(var(--blur));
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
