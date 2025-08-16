@@ -40,6 +40,7 @@ body {
   background-color: black;
       margin: 0;
       padding:0;
+  overflow-x: hidden;
 }
 
 /* Takes full screen width */
@@ -64,7 +65,8 @@ body {
   display: inline-flex;
   border-radius: 100px;
   background-color: var(--top-nav);
-  backdrop-filter:blur(var(--blur))
+  backdrop-filter:blur(var(--blur));
+  -webkit-backdrop-filter:blur(var(--blur))
 }
 
 
@@ -89,6 +91,7 @@ body {
   justify-content: center;
   background-color: var(--tertiary);
   backdrop-filter:blur(calc(var(--blur) - 4px));
+  -webkit-backdrop-filter:blur(calc(var(--blur) - 4px));
 }
 
 .menu-btn i{
@@ -128,6 +131,7 @@ color: var(--primary);
   padding-top: 0px;
   background-color: var(--top-nav);
   backdrop-filter:blur(var(--blur));
+-webkit-backdrop-filter:blur(var(--blur));
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
@@ -159,6 +163,7 @@ color: var(--primary);
 .nav-btn {
   background-color: var(--nav-btn);
     backdrop-filter:blur(var(--blur));
+-webkit-backdrop-filter:blur(var(--blur));
   padding: 5px;
   align-self: center;
   display:inline-flex;
@@ -308,25 +313,25 @@ margin:10px;
 }
 
 .module-container{
-  width:500px;
+  max-width:500px;
   height:400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   perspective: 1600px;
 }
 .module-screen{
-  width:400px;
+  width:300px;
   aspect-ratio: 16/9;
   height:auto;
-  background-color: black;
+  background-color: rgb(22, 22, 22);
   transform-origin: 50% 100%;
   transform: rotate3d(1, 0, 0, 0deg)
   
 }
 .module-keyboard{
-  width:400px;
+  width:300px;
   aspect-ratio: 16/9;
   height:auto;
   background-color: #AAAAAA;
