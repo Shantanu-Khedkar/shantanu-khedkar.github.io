@@ -40,7 +40,6 @@ body {
   background-color: black;
       margin: 0;
       padding:0;
-  overflow-x: hidden;
 }
 
 /* Takes full screen width */
@@ -65,9 +64,7 @@ body {
   display: inline-flex;
   border-radius: 100px;
   background-color: var(--top-nav);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
-  transform: translate3d(0, 0, 0);
+  backdrop-filter:blur(var(--blur))
 }
 
 
@@ -91,9 +88,7 @@ body {
   width: 48px;
   justify-content: center;
   background-color: var(--tertiary);
-  -webkit-backdrop-filter:blur(6px);
-  backdrop-filter:blur(6px);
-  transform: translate3d(0, 0, 0);
+  backdrop-filter:blur(calc(var(--blur) - 4px));
 }
 
 .menu-btn i{
@@ -132,8 +127,7 @@ color: var(--primary);
   padding:10px;
   padding-top: 0px;
   background-color: var(--top-nav);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(var(--blur));
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
@@ -165,8 +159,7 @@ color: var(--primary);
 .nav-btn {
   -webkit-backdrop-filter:blur(10px);
   background-color: var(--nav-btn);
-  transform: translate3d(0, 0, 0);
-  backdrop-filter:blur(10px);
+    backdrop-filter:blur(var(--blur));
   padding: 5px;
   align-self: center;
   display:inline-flex;
@@ -318,27 +311,25 @@ margin:10px;
 }
 
 .module-container{
-  max-width:500px;
+  width:500px;
   height:400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   perspective: 1600px;
 }
 .module-screen{
-  width:300px;
+  width:400px;
   aspect-ratio: 16/9;
   height:auto;
-  background-color: rgba(191, 191, 191, 0.371);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: black;
   transform-origin: 50% 100%;
   transform: rotate3d(1f, 0, 0, 0deg)
   
 }
 .module-keyboard{
-  width:300px;
+  width:400px;
   aspect-ratio: 16/9;
   height:auto;
   background-color: #AAAAAA;
