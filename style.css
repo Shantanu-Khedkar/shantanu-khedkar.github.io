@@ -5,7 +5,7 @@ Variable Definitions
 :root {
 
   --top-nav:rgba(179, 179, 179, 0.168);
-  --nav-btn: rgba(252, 252, 252, 0.168);
+  --nav-btn: rgba(179, 179, 179, 0.168);
   --tertiary: #000000;
   --primary: #ff7800;
   --primary-text:white;;
@@ -65,8 +65,8 @@ body {
   display: inline-flex;
   border-radius: 100px;
   background-color: var(--top-nav);
-  backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
 }
 
 
@@ -90,8 +90,8 @@ body {
   width: 48px;
   justify-content: center;
   background-color: var(--tertiary);
-  backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
 }
 
 .menu-btn i{
@@ -130,8 +130,8 @@ color: var(--primary);
   padding:10px;
   padding-top: 0px;
   background-color: var(--top-nav);
-  backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
@@ -162,8 +162,8 @@ color: var(--primary);
 
 .nav-btn {
   background-color: var(--nav-btn);
-    backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
   padding: 5px;
   align-self: center;
   display:inline-flex;
@@ -328,8 +328,8 @@ margin:10px;
   aspect-ratio: 16/9;
   height:auto;
   background-color: rgba(191, 191, 191, 0.371);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transform-origin: 50% 100%;
   transform: rotate3d(1, 0, 0, 0deg)
   
