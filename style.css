@@ -67,6 +67,7 @@ body {
   background-color: var(--top-nav);
   -webkit-backdrop-filter:blur(10px);
   backdrop-filter:blur(10px);
+  transform: translate3d(0, 0, 0);
 }
 
 
@@ -92,6 +93,7 @@ body {
   background-color: var(--tertiary);
   -webkit-backdrop-filter:blur(6px);
   backdrop-filter:blur(6px);
+  transform: translate3d(0, 0, 0);
 }
 
 .menu-btn i{
@@ -124,7 +126,7 @@ color: var(--primary);
   top:55px; /* Magic number */
   justify-self: center;
   left:50%;
-  transform: translate(-50%);
+  transform: translate(-50%) translate3d(0,0,0);
   width:calc(99% - 75px); /* Magic number */
   gap:10px;
   padding:10px;
@@ -161,8 +163,9 @@ color: var(--primary);
 }
 
 .nav-btn {
-  background-color: var(--nav-btn);
   -webkit-backdrop-filter:blur(10px);
+  background-color: var(--nav-btn);
+  transform: translate3d(0, 0, 0);
   backdrop-filter:blur(10px);
   padding: 5px;
   align-self: center;
@@ -176,7 +179,7 @@ aspect-ratio: 1/1;
 width:2em;
 padding:4px;
 border-radius: 100px;
-  background-color: var(--tertiary);
+background-color: var(--tertiary);
     
   display:flex;
   justify-content: center;
@@ -331,7 +334,7 @@ margin:10px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transform-origin: 50% 100%;
-  transform: rotate3d(1, 0, 0, 0deg)
+  transform: rotate3d(1f, 0, 0, 0deg)
   
 }
 .module-keyboard{
