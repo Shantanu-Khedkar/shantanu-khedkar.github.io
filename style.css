@@ -4,8 +4,8 @@ Variable Definitions
 */
 :root {
 
-  --top-nav:rgba(179, 179, 179, 0.168);
-  --nav-btn: rgba(179, 179, 179, 0.168);
+  --top-nav:rgba(89, 89, 89, 0.145);
+  --nav-btn: rgba(181, 181, 181, 0.241);
   --tertiary: #000000;
   --primary: #ff7800;
   --primary-text:white;;
@@ -40,7 +40,13 @@ body {
   background-color: black;
       margin: 0;
       padding:0;
+      
+      
 }
+html{
+  overflow-x: hidden;
+}
+
 
 /* Takes full screen width */
 .top-nav-wrapper{
@@ -213,6 +219,9 @@ color: var(--primary)
   .nav-opt .nav-btn:nth-of-type(3):not(.responsive-nav .nav-btn){ /* Hide Button */
     display: none;
   }
+  .nav-btn-label{
+    font-size:16px;
+  }
 }
 
 @media only screen and (max-width: 475px) {
@@ -223,6 +232,7 @@ color: var(--primary)
     .nav-opt .nav-btn:nth-of-type(1):not(.responsive-nav .nav-btn) { /* Hide Button */
     display: none;
   }
+
 }
 
 
@@ -257,13 +267,15 @@ section{
       margin-bottom: 0px;
       display: flex;
       flex-wrap: wrap;
-      height:calc(100vh + 30px);
+      max-height:calc(100vh + 30px);
+      overflow-y: hidden;
       justify-content: center;
       align-items: stretch;
 }
 
 .hero-subsection{
-  flex-grow: 1;
+  min-width:380px;
+  flex:1;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -272,12 +284,11 @@ section{
   text-align: center;
 }
 
-
 .hero-subsection:nth-of-type(1){
   color: var(--primary-text);
-  
   font-family: Arial, Helvetica, sans-serif
 }
+
 .hero-subsection h1{
   margin: 0px;
   font-size: 48px;
@@ -285,12 +296,16 @@ section{
 .hero-subsection h2{
   font-size: 32px;
 }
+
+
+
+
 .hero-subsection h2:nth-of-type(1)::after{
-content: "•";
+content: "-";
 margin:10px;
 }
 .hero-subsection h2:nth-of-type(2)::after{
-content: "•";
+content: "-";
 margin:10px;
 }
 
@@ -309,31 +324,47 @@ margin:10px;
   font-weight: bolder;
   
 }
+@media only screen and (max-width: 800px) {
+
+.hero-subsection{
+  min-width: 300px;
+}
+.hero-subsection h1{
+  font-size: 32px;
+}
+.hero-subsection h2{
+  font-size: 24px;
+}
+.hero-cta{
+  font-size: 16px;
+}
+}
 
 .module-container{
-  width:500px;
-  height:400px;
+  width:80%;
+  min-width:300px;
+  max-width: 400px;
+  
+  height:100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   perspective: 1600px;
 }
+
 .module-screen{
-  width:400px;
+  width:100%;
   aspect-ratio: 16/9;
   height:auto;
-  background-color: black;
-  transform-origin: 50% 100%;
-  transform: rotate3d(1f, 0, 0, 0deg)
+  background-color: rgb(0, 0, 0);
   
 }
 .module-keyboard{
-  width:400px;
+  width:100%;
   aspect-ratio: 16/9;
   height:auto;
   background-color: #AAAAAA;
-  transform-origin: 50% 0%;
-  transform: rotate3d(1, 0, 0, 80deg)
- 
+  transform-origin: top;
+  transform: rotate3d(1,0,0,80deg);
 }
