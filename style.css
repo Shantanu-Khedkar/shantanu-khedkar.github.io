@@ -246,7 +246,6 @@ color: var(--primary)
 section{
   display: flex;
   padding:10px;
-  height:100vh;
   
   
 }
@@ -261,15 +260,16 @@ section{
       margin-bottom: 0px;
       display: flex;
       flex-wrap: wrap;
-      max-height:calc(100vh + 30px);
-      overflow-y: hidden;
+      min-height:calc(100vh + 30px);
+      
       justify-content: center;
-      align-items: stretch;
+      align-items:center;
 }
 
 .hero-subsection{
   min-width:380px;
-  flex:1;
+  max-width:50%;
+  flex-grow:1;
   position: relative;
   display:flex;
   align-items: center;
@@ -277,6 +277,8 @@ section{
   flex-direction: column;
   padding:10px;
   text-align: center;
+  height:50%;
+  min-height:400px;
 }
 
 .hero-subsection:nth-of-type(1){
@@ -335,15 +337,16 @@ margin:10px;
 }
 }
 .module-container{
-  width:80%;
-  min-width:300px;
+  width:70%;
+  min-width:200px;
   max-width: 400px;
-  position:absolute;
+ 
   height:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10%;
   perspective: 1600px;
   transform-style: preserve-3d;
 
@@ -379,9 +382,7 @@ margin:10px;
   height:auto;
   background-color: #aaaaaa00;
   transform-origin: bottom;
-  transform: rotate3d(-1,0,0,50deg);
-
-
+  display: none;
 }
 
 .module-keyboard-keyarea{
@@ -427,27 +428,77 @@ margin:10px;
 }
 
 .keyarea-key{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   aspect-ratio: 1/1;
   height:100%;
   background-color:black;
   border: 2px solid #AAAAAA;
   box-sizing: border-box;
-  
+  position: relative;
+  overflow: hidden;
+  color: white;
+  align-content:start;
+  font-size: 45%;
+  text-align: left;
+  text-indent: 1px each-line;
+  line-height: 100%;
+  user-select: none;
 }
+
+.keyarea-key::before{
+  content:"";
+  height:2px;
+  display:none;
+}
+.keyarea-key::after{
+  content:"";
+  position: absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:2px;
+  background-color: #676767;
+}
+
+
+.key-text{
+  font-size: 45%;
+  padding-right:2px;
+  padding-top: 2px;
+  align-content:start;
+}
+.key-letter{
+  font-size: 50%;
+  padding-top: 1px;
+  padding-right: 2px;
+}
+
+
+.key-duo span{
+font-size: 130%;
+line-height: 100%;
+}
+
 .key-bksp{
   aspect-ratio: 1.8/1;
+  text-align: right;
 }
-.key-tab{
+.key-rtab{
+  aspect-ratio: 1.4/1;
+}
+.key-ltab{
   aspect-ratio: 1.4/1;
 }
 .key-entr{
   aspect-ratio: 2/1;
+  text-align: right;
 }
 .key-cplk{
    aspect-ratio: 1.8/1;
 }
 .key-rshf{
    aspect-ratio: 2.6/1;
+   text-align: right;
 }
 .key-lshf{
    aspect-ratio: 2.2/1;
@@ -460,4 +511,68 @@ margin:10px;
 }
 .key-spce{
   aspect-ratio: 5.1/1;
+}
+.key-pressed{
+  border-bottom: 2px solid #AAAAAA;
+}
+
+.key-pressed::after{
+  background-color: #AAAAAA;
+  bottom:unset;
+  top:0px
+}
+
+.key-pressed::before{
+  display: block;
+}
+
+.keyarea-key:hover{
+  border-bottom: 2px solid #AAAAAA;
+}
+
+.keyarea-key:hover::after{
+  background-color: #AAAAAA;
+  bottom:unset;
+  top:0px;
+  
+}
+.key-logo{
+  text-indent: 0px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  
+}
+.key-logo i{
+  height:100%;
+  padding-top: calc(31.5% - 2px);
+  font-size: 150%;
+}
+.keyarea-key:hover::before{
+  display: block;
+  
+}
+
+@media only screen and (max-width:1120px){
+.keyarea-key{
+  font-size: 35%;
+}
+.key-letter{
+  font-size:40% ;
+}
+.key-text{
+  font-size: 35%;
+}
+}
+
+@media only screen and (max-width:950px){
+.keyarea-key{
+  font-size: 30%;
+}
+.key-letter{
+  font-size:35% ;
+}
+.key-text{
+  font-size: 30%;
+}
 }
