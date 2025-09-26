@@ -59,6 +59,8 @@ html{
   
 }
 
+
+
 /* Main nav element */
 
 .top-nav {
@@ -70,7 +72,19 @@ html{
   border-radius: 100px;
   background-color: var(--top-nav);
 }
+.top-nav-wrapper:has(.flipped){
+  bottom:1%;
+}
 
+.top-nav-wrapper:has(.covered){
+  position: sticky;
+  bottom:calc(100% - 60px);
+  top:0px;
+}
+.covered{
+  width: 100%;
+  border-radius: 0px;
+}
 
 .logo {
   aspect-ratio: 1/1;
@@ -133,7 +147,7 @@ color: var(--primary);
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
 
-.flipped .nav-opt{
+.flipped:not(.covered) .nav-opt  {
   top:unset;
   bottom:55px; /* Magic number */
   padding:10px;
@@ -141,21 +155,32 @@ color: var(--primary);
   padding-top: 10px;
   border-radius: 30px 30px 0px 0px; /* 60px/2 */
 }
+.covered.responsive-nav .nav-opt{
+  width:calc(100vw - 20px);
+  border-radius: 0px;
+  height: 100vh;
+  justify-content: start;
+}
+
+
 .responsive-nav .nav-opt .nav-btn:nth-of-type(4){
   border-radius:10px 10px 25px 25px /* 60px-5px-5px/2 */
 }
 
-.flipped .nav-opt .nav-btn:nth-of-type(4){
+.flipped:not(.covered) .nav-opt .nav-btn:nth-of-type(4){
   border-radius:10px 10px 10px 10px /* 60px-5px-5px/2 */
 }
 
-.flipped .nav-opt .nav-btn:nth-of-type(1){
+.flipped:not(.covered) .nav-opt .nav-btn:nth-of-type(1){
   border-radius:25px 25px 10px 10px /* 60px-5px-5px/2 */
 }
 
 .responsive-nav .nav-btn{
   width:calc(100% - 10px); /* 5px gutters */
   border-radius: 10px; 
+}
+.covered.responsive-nav .nav-btn{
+width:calc(99% - 75px);
 }
 
 .nav-btn {

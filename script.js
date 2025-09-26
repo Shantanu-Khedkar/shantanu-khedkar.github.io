@@ -3,6 +3,12 @@ function checkWindowSize() {
         document.getElementById('top-nav').classList.remove('responsive-nav') // Close responsive nav
         document.getElementById('top-nav').classList.remove('flipped')
     }
+    if (window.innerHeight < 450){
+        document.getElementById('nav-opt').parentElement.classList.add('covered')
+    }
+    else{
+        document.getElementById('nav-opt').parentElement.classList.remove('covered')
+    }
 }
 
 // Event listener for window resize
@@ -17,7 +23,9 @@ function isOffscreen() {
 
     if(rect.top <0 && nav.parentElement.classList.contains('flipped')){
         console.log('flipped')
+        if(window.innerHeight > 450){
         nav.parentElement.classList.remove('flipped')
+        }
     }
 
     if(rect.top+rect.height > viewportHeight && nav.parentElement.classList.contains('responsive-nav')){
@@ -28,7 +36,13 @@ function isOffscreen() {
     if(!nav.parentElement.classList.contains('responsive-nav') && nav.parentElement.classList.contains('flipped')){
                 console.log('flipped')
         nav.parentElement.classList.remove('flipped')
+
     }
 
 }
+
+checkWindowSize()
+
+
+
 
