@@ -413,14 +413,14 @@ margin:10px;
 .module-keyboard-touchpad{
   flex-grow: 1;
    width:30%;
-   background-color: #595959;
+   background-color: #9a9a9a;
    position: relative;
 }
 .module-keyboard-touchpad::after{
   content: "";
   width:80%;
   bottom:20%;
-  border: 0.7px solid rgb(112, 112, 112);
+  border: 0.7px solid rgb(116, 116, 116);
   position: absolute;
   left:50%;
   transform: translateX(-50%)
@@ -460,8 +460,14 @@ margin:10px;
   text-align: left;
   text-indent: 1px each-line;
   line-height: 100%;
-  user-select: none;
   overflow: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .keyarea-key::before{
@@ -528,7 +534,22 @@ line-height: 1em;
 }
 .key-mult{
    aspect-ratio: 2.6/1;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
 }
+.key-mult-row{
+display: flex;
+flex-direction: row;
+}
+.mult-key{
+ flex-grow: 1;
+ font-size: 0.8em;
+ aspect-ratio: 1.3/1;
+ line-height: 1.5em;
+ align-items: center;
+}
+
 .key-ctrl{
    aspect-ratio: 1.1/1;
 }
@@ -574,5 +595,11 @@ line-height: 1em;
 .keyarea-key:hover::before{
   display: block;
   
+}
+.key-arrow{
+  text-indent: 0px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
 }
 
