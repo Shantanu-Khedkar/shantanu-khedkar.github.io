@@ -3,7 +3,7 @@ function checkWindowSize() {
         document.getElementById('top-nav').classList.remove('responsive-nav') // Close responsive nav
         document.getElementById('top-nav').classList.remove('flipped')
     }
-    if (window.innerHeight < 450){
+    if (window.innerHeight < 550){
         document.getElementById('nav-opt').parentElement.classList.add('covered')
     }
     else{

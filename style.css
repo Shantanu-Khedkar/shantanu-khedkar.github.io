@@ -77,9 +77,10 @@ html{
 }
 
 .top-nav-wrapper:has(.covered){
-  position: sticky;
-  bottom:calc(100% - 60px);
+  position: fixed;
+  bottom:unset;
   top:0px;
+  width:100%
 }
 .covered{
   width: 100%;
@@ -286,7 +287,7 @@ section{
       display: flex;
       flex-wrap: wrap;
       min-height:calc(100vh + 30px);
-      
+      position: relative;
       justify-content: center;
       align-items:center;
 }
