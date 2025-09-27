@@ -504,7 +504,9 @@ margin:10px;
 font-size: 1em;
 line-height: 1em;
 }
-
+.key-duo{
+  padding-left:0.2em;
+}
 .key-bksp{
   aspect-ratio: 1.8/1;
   text-align: right;
@@ -541,12 +543,13 @@ line-height: 1em;
 .key-mult-row{
 display: flex;
 flex-direction: row;
+aspect-ratio: 4/1;
 }
 .mult-key{
  flex-grow: 1;
  font-size: 0.8em;
  aspect-ratio: 1.3/1;
- line-height: 1.5em;
+ line-height: 1.6em;
  align-items: center;
 }
 
