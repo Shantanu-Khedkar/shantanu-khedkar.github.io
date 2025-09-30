@@ -45,4 +45,14 @@ checkWindowSize()
 
 
 
+Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function(elem){
+        elem.addEventListener("click", function(e){
+    if (!this.classList.contains("selected")){
+        Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function(elem){
+            elem.classList.remove('selected')
+        })
+        this.classList.toggle("selected");
+    }
+})
 
+})
