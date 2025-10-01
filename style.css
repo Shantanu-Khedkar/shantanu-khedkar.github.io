@@ -285,7 +285,6 @@ section{
       -webkit-background-position: center;
       margin-bottom: 0px;
       display: flex;
-      flex-wrap: wrap;
       min-height:calc(100vh + 30px);
       position: relative;
       justify-content: center;
@@ -354,3 +353,4 @@ margin:10px;
   font-weight: bolder;
   
 }
+
