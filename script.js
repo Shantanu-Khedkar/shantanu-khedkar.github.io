@@ -56,3 +56,15 @@ Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function
 })
 
 })
+var highareaCode = document.getElementById("app-higharea-code")
+var editareaCode = document.getElementById("app-editarea-code")
+
+highareaCode.textContent = document.getElementById("hero-editable").innerHTML
+editareaCode.textContent = document.getElementById("hero-editable").innerHTML
+editareaCode.addEventListener('input', function(e){
+highareaCode.textContent = editareaCode.innerText
+highareaCode.removeAttribute("data-highlighted")
+hljs.highlightElement(highareaCode);
+
+})
+hljs.highlightElement(highareaCode);

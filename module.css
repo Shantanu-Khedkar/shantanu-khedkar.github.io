@@ -383,13 +383,46 @@ border-left: 1px solid #818181;
 border-right: 1px solid #818181;
 }
 .app-editarea{
-flex-grow: 1;
-color: white;
-text-align: start;
-padding: 0.5em;
+flex: 1;
+display: flex;
+position: relative;
+display: flex;
 overflow: scroll;
-font-family:monospace;
 }
+.app-editarea pre{
+  flex: 1;
+  display: flex;
+  position: relative;
+  margin: 0px;
+  height: min-content;
+    min-width: 100%;
+  min-height: 100%;
+  width: min-content;
+}
+.app-editarea code{
+  flex:1;
+  text-align: left;
+  overflow: hidden;
+  overflow-x: hidden;
+  min-width:fit-content;
+}
+.app-editarea pre:nth-of-type(1){
+  position: absolute;
+  width:min-content;
+  height: min-content;
+  top:0px;
+  left:0px;
+  z-index: 10;
+  background-color: rgba(0,0,0,0);
+}
+
+.app-editarea pre:nth-of-type(1) code{
+color: rgba(0,0,0,0);
+background-color: rgba(0,0,0,0);
+caret-color: rgb(0, 0, 0);
+
+}
+
 @media only screen and (min-width:1030px){
 .module-container{
   max-width: 400px;

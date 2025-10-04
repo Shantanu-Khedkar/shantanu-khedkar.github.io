@@ -3,66 +3,52 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="module.css">
+  <link rel="stylesheet" href="module.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-   <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
-   <link href="./fontawesome/css/solid.css" rel="stylesheet" />
-   <link href="./fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="./fontawesome/css/solid.css" rel="stylesheet" />
+  <link href="./fontawesome/css/brands.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./highlight/styles/base16/tender.css">
+  <script src="./highlight/highlight.min.js"></script>
 </head>
 
 <body>
-    <section class="hero-section">
-       <div class="hero-subsection no-select">
-        <h1>Shantanu Khedkar</h1>
-        <div class="hero-tagline">
-          <h2>Hack</h2>
-          <h2>Design</h2>
-          <h2>Code</h2>
-          </div>
-          <div class="hero-cta">
-            Learn More
-            </div>
-       </div>
-       <div class="hero-subsection">
-       <div class="module-container">
-       <div class="module-screen">
-        <div class="module-screen-content">
-      <div class="module-app">
-            <div class="module-app-titlebar no-select"><div class="app-titlebar-title">Text Editor</div><i class=""></i><i class=""></i></div>
-            <div class="module-app-filebar no-select">
-              <div class="app-filebar-file selected">index.html</div>
-              <div class="app-filebar-file">style.css</div>
-              <div class="app-filebar-file">README.md</div>
-            </div>
-            <div class="app-editarea">
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-code
-
-          </div>
-          </div>
+  <section class="hero-section">
+    <div class="hero-subsection no-select" id="hero-editable">
+<!--Edit Here-->
+<h1>Shantanu Khedkar</h1>
+<div class="hero-tagline">
+  <h2>Hack</h2>
+  <h2>Design</h2>
+  <h2>Code</h2>
+</div>
+<div class="hero-cta">
+  Learn More
+</div>
     </div>
-  </div>
+    <div class="hero-subsection">
+      <div class="module-container">
+        <div class="module-screen">
+          <div class="module-screen-content">
+            <div class="module-app">
+              <div class="module-app-titlebar no-select">
+                <div class="app-titlebar-title">Text Editor</div><i class=""></i><i class=""></i>
+              </div>
+              <div class="module-app-filebar no-select">
+                <div class="app-filebar-file selected">index.html</div>
+                <div class="app-filebar-file">style.css</div>
+                <div class="app-filebar-file">README.md</div>
+              </div>
+              <div class="app-editarea">
+                <pre ><code id="app-editarea-code" class="hljs language-html" contenteditable="true" spellcheck="false"></code></pre>
+                <pre ><code id="app-higharea-code" class="hljs language-html"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div class = module-keyboard>
+        <div class=module-keyboard>
           <div class="module-keyboard-keyarea">
             <div class="keyarea-fncrow"></div>
             <div class="keyarea-keyrow">
@@ -81,7 +67,7 @@ code
               <div class="keyarea-key key-duo">+<br><span>=</span></div>
               <div class="keyarea-key key-bksp key-text">Backspace</div>
             </div>
-                        <div class="keyarea-keyrow">
+            <div class="keyarea-keyrow">
               <div class="keyarea-key key-ltab key-text">Tab</div>
               <div class="keyarea-key key-letter">Q</div>
               <div class="keyarea-key key-letter">W</div>
@@ -97,7 +83,7 @@ code
               <div class="keyarea-key key-duo">}<br><span>]</span></div>
               <div class="keyarea-key key-rtab key-duo">|<br><span>&#92;</span></div>
             </div>
-                        <div class="keyarea-keyrow">
+            <div class="keyarea-keyrow">
               <div class="keyarea-key key-cplk key-text">CapsLock</div>
               <div class="keyarea-key key-letter">A</div>
               <div class="keyarea-key key-letter">S</div>
@@ -112,7 +98,7 @@ code
               <div class="keyarea-key key-duo">&quot;<br><span>&apos;</span></div>
               <div class="keyarea-key key-entr key-text">Enter</div>
             </div>
-                        <div class="keyarea-keyrow">
+            <div class="keyarea-keyrow">
               <div class="keyarea-key key-lshf key-text">Shift</div>
               <div class="keyarea-key key-letter">Z</div>
               <div class="keyarea-key key-letter">X</div>
@@ -126,7 +112,7 @@ code
               <div class="keyarea-key key-duo">?<br><span>&#47;</span></div>
               <div class="keyarea-key key-rshf key-text">Shift</div>
             </div>
-                        <div class="keyarea-keyrow">
+            <div class="keyarea-keyrow">
               <div class="keyarea-key key-text">Fn</div>
               <div class="keyarea-key key-ctrl key-text">Ctrl</div>
               <div class="keyarea-key key-logo"><i class="fa-brands fa-html5"></i></div>
@@ -135,38 +121,59 @@ code
               <div class="keyarea-key key-text">Alt</div>
               <div class="keyarea-key key-text">PrtSc</div>
               <div class="keyarea-key key-text">Ctrl</div>
-              <div class="key-mult"><div class="key-mult-row">
-                <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-caret-up"></i></div><div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-up-long"></i></div><div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-caret-down"></i></div></div><div class="key-mult-row">
-                <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-left-long"></i></div><div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-down-long"></i></div><div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-right-long"></i></div></div></div>
+              <div class="key-mult">
+                <div class="key-mult-row">
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-caret-up"></i></div>
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-up-long"></i></div>
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-caret-down"></i></div>
+                </div>
+                <div class="key-mult-row">
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-left-long"></i></div>
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-down-long"></i></div>
+                  <div class="keyarea-key mult-key key-arrow"><i class="fa-solid fa-right-long"></i></div>
+                </div>
+              </div>
             </div>
 
 
 
           </div>
-          <div class ="module-keyboard-touchpad"></div>
+          <div class="module-keyboard-touchpad"></div>
         </div>
-        </div>
-        </div>
-  </section> 
+      </div>
+    </div>
+  </section>
 
   <div class="top-nav-wrapper">
-  <div class="top-nav no-select" id="top-nav">
-    <div class="logo"></div>
-    <div class="nav-opt" id="nav-opt">
-    <div class="nav-btn"><div class="nav-btn-icon"><i class="fa-solid fa-hand-peace"></i></div><span class="nav-btn-label">About</span></div>
-    <div class="nav-btn"><div class="nav-btn-icon"><i class="fa-solid fa-book-bookmark"></i></div><span class="nav-btn-label">Blog</span></div>
-    <div class="nav-btn"><div class="nav-btn-icon"><i class="fa-solid fa-lightbulb"></i></div><span class="nav-btn-label">Projects</span></div>
-    <div class="nav-btn"><div class="nav-btn-icon"><i class="fa-solid fa-link"></i></div><span class="nav-btn-label">Contact</span></div>
+    <div class="top-nav no-select" id="top-nav">
+      <div class="logo"></div>
+      <div class="nav-opt" id="nav-opt">
+        <div class="nav-btn">
+          <div class="nav-btn-icon"><i class="fa-solid fa-hand-peace"></i></div><span class="nav-btn-label">About</span>
+        </div>
+        <div class="nav-btn">
+          <div class="nav-btn-icon"><i class="fa-solid fa-book-bookmark"></i></div><span
+            class="nav-btn-label">Blog</span>
+        </div>
+        <div class="nav-btn">
+          <div class="nav-btn-icon"><i class="fa-solid fa-lightbulb"></i></div><span
+            class="nav-btn-label">Projects</span>
+        </div>
+        <div class="nav-btn">
+          <div class="nav-btn-icon"><i class="fa-solid fa-link"></i></div><span class="nav-btn-label">Contact</span>
+        </div>
+      </div>
+      <div class="menu-btn" onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"
+        id="menu-btn"><i class="fa-solid fa-bars"></i></div>
+
     </div>
-    <div class="menu-btn" onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()" id="menu-btn"><i class="fa-solid fa-bars"></i></div>
-   
-  </div>
   </div>
   <section style="height:100vh">
-   
+
   </section>
 
 </body>
 
 <script src="script.js"></script>
+
 </html>

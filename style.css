@@ -231,7 +231,9 @@ color: var(--primary)
   .hero-section{
     border-bottom-right-radius: 0px;
   }
-
+.top-nav-wrapper{
+  bottom:1%;
+}
 }
 
 @media only screen and (max-width: 850px) {
@@ -305,7 +307,6 @@ section{
   text-align: center;
   
   height:50%;
-  min-height:400px;
 }
 
 .hero-subsection:nth-of-type(1){
