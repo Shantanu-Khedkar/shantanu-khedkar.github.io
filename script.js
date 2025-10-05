@@ -50,8 +50,10 @@ Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function
     if (!this.classList.contains("selected")){
         Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function(elem){
             elem.classList.remove('selected')
+            document.getElementById("f-"+elem.innerText).classList.remove("visible")
         })
         this.classList.toggle("selected");
+        document.getElementById("f-"+this.innerText).classList.add("visible")
     }
 })
 
@@ -63,6 +65,7 @@ highareaCode.textContent = document.getElementById("hero-editable").innerHTML
 editareaCode.textContent = document.getElementById("hero-editable").innerHTML
 editareaCode.addEventListener('input', function(e){
 highareaCode.textContent = editareaCode.innerText
+document.getElementById("hero-editable").innerHTML = editareaCode.innerText
 highareaCode.removeAttribute("data-highlighted")
 hljs.highlightElement(highareaCode);
 editareaCode.style.setProperty('--font-size', window.getComputedStyle(highareaCode).fontSize);
@@ -70,4 +73,14 @@ editareaCode.style.setProperty('--font-size', window.getComputedStyle(highareaCo
 })
 hljs.highlightElement(highareaCode);
 editareaCode.style.setProperty('--font-size', window.getComputedStyle(highareaCode).fontSize);
-console.log(window.getComputedStyle(highareaCode).fontSize)
+
+
+var highareaCode1 = document.getElementById("app-higharea-code1")
+var editareaCode1 = document.getElementById("app-editarea-code1")
+highareaCode1.textContent = editareaCode1.innerText
+
+editareaCode1.addEventListener('input', function(e){
+highareaCode1.textContent = editareaCode1.innerText
+editareaCode1.style.setProperty('--font-size', window.getComputedStyle(highareaCode1).fontSize);
+})
+editareaCode1.style.setProperty('--font-size', window.getComputedStyle(highareaCode1).fontSize);

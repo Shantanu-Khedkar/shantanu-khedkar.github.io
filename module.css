@@ -384,12 +384,14 @@ border-right: 1px solid #818181;
 }
 .app-editarea{
 flex: 1;
-display: flex;
+display: none;
 position: relative;
-display: flex;
 overflow:scroll;
 transform: none;
 touch-action: pan-x;
+}
+.visible{
+  display:flex;
 }
 .app-editarea::-webkit-scrollbar-corner{
   display: none;
@@ -407,8 +409,8 @@ touch-action: pan-x;
 .app-editarea code{
   flex:1;
   text-align: left;
-  overflow: auto;
-  overflow-x: auto;
+  overflow: hidden;
+  overflow-x: hidden;
   min-width:fit-content;
   font-size: 1em;
 }
