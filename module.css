@@ -387,7 +387,9 @@ flex: 1;
 display: flex;
 position: relative;
 display: flex;
-overflow: scroll;
+overflow:scroll;
+transform: none;
+touch-action: pan-x;
 }
 .app-editarea pre{
   flex: 1;
@@ -402,9 +404,10 @@ overflow: scroll;
 .app-editarea code{
   flex:1;
   text-align: left;
-  overflow: hidden;
-  overflow-x: hidden;
+  overflow: auto;
+  overflow-x: auto;
   min-width:fit-content;
+  font-size: 1em;
 }
 .app-editarea pre:nth-of-type(1){
   position: absolute;
@@ -413,13 +416,15 @@ overflow: scroll;
   top:0px;
   left:0px;
   z-index: 10;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .app-editarea pre:nth-of-type(1) code{
-color: rgba(0,0,0,0);
+--font-size : 1em;
+color: rgba(255, 255, 0, 0);
 background-color: rgba(0,0,0,0);
-caret-color: rgb(0, 0, 0);
+caret-color: rgb(201, 201, 201);
+font-size: var(--font-size);
 
 }
 

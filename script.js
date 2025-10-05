@@ -65,6 +65,9 @@ editareaCode.addEventListener('input', function(e){
 highareaCode.textContent = editareaCode.innerText
 highareaCode.removeAttribute("data-highlighted")
 hljs.highlightElement(highareaCode);
+editareaCode.style.setProperty('--font-size', window.getComputedStyle(highareaCode).fontSize);
 
 })
 hljs.highlightElement(highareaCode);
+editareaCode.style.setProperty('--font-size', window.getComputedStyle(highareaCode).fontSize);
+console.log(window.getComputedStyle(highareaCode).fontSize)
