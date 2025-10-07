@@ -383,54 +383,45 @@ border-left: 1px solid #818181;
 border-right: 1px solid #818181;
 }
 .app-editarea{
-flex: 1;
 display: none;
 position: relative;
-overflow:scroll;
-transform: none;
-touch-action: pan-x;
+overflow:hidden;
+flex: 1;
 }
-.visible{
-  display:flex;
+.app-editarea textarea, .app-editarea pre{
+width: 100%;
+height: 100%;
+  min-width: unset;
+  box-sizing: border-box;
+padding: 1em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  overflow: scroll;
+  white-space: pre;
 }
-.app-editarea::-webkit-scrollbar-corner{
-  display: none;
+.app-editarea textarea{
+  z-index: 1;
+  color: transparent;
+  background: transparent;
+  caret-color: rgb(200, 200, 200);
+  border: none;
+  resize: none;
+}
+textarea:focus{
+  outline: none;
 }
 .app-editarea pre{
-  flex: 1;
-  display: flex;
-  position: relative;
-  margin: 0px;
-  height: min-content;
-    min-width: 100%;
-  min-height: 100%;
-  width: min-content;
+  z-index: 0;
 }
-.app-editarea code{
-  flex:1;
-  text-align: left;
-  overflow: hidden;
-  overflow-x: hidden;
-  min-width:fit-content;
+.app-editarea textarea, .app-editarea pre, .app-editarea pre *{
   font-size: 1em;
+  font-family: monospace;
+  line-height: 1.2em;
 }
-.app-editarea pre:nth-of-type(1){
-  position: absolute;
-  width:min-content;
-  height: min-content;
-  top:0px;
-  left:0px;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.app-editarea pre:nth-of-type(1) code{
---font-size : 1em;
-color: rgba(255, 255, 0, 0);
-background-color: rgba(0,0,0,0);
-caret-color: rgb(201, 201, 201);
-font-size: var(--font-size);
-
+.visible{
+  display: flex;
 }
 
 @media only screen and (min-width:1030px){

@@ -3,20 +3,21 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="module.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 maximum-scale=1 user-scalable=no" />
   <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
   <link href="./fontawesome/css/solid.css" rel="stylesheet" />
   <link href="./fontawesome/css/brands.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./highlight/styles/base16/tender.css">
-  <script src="./highlight/highlight.min.js"></script>
+  <link rel="stylesheet" href="./prism/prism-gruvbox-dark.css">
+  <script src="./prism/prism.js"></script>
+    <link rel="stylesheet" href="module.css">
+  
 </head>
 
 <body>
   <section class="hero-section">
-    <div class="hero-subsection no-select" id="hero-editable">
-<!--Edit Here-->
+    <div class="hero-subsection no-select" id="hero-editable"><!--Edit Here-->
 <h1>Shantanu Khedkar</h1>
 <div class="hero-tagline">
   <h2>Hack</h2>
@@ -40,32 +41,12 @@
                 <div class="app-filebar-file">README.md</div>
               </div>
               <div class="app-editarea visible" id="f-index.html">
-                <pre ><code id="app-editarea-code" class="hljs language-html" contenteditable="true" spellcheck="false"></code></pre>
-                <pre ><code id="app-higharea-code" class="hljs language-html"></code></pre>
+                <textarea class="editarea-input" id="index-input" spellcheck="false"></textarea>
+                <pre id="highlighting" aria-hidden="true" class="language-html"><code id="editarea-highlight"></code></pre>
               </div>
-                            <div class="app-editarea" id="f-README.md">
-                <pre ><code id="app-editarea-code1" class="hljs language-html wrap" contenteditable="true" spellcheck="false">
-# Text Editor Module
-
-This is a simple text editor gimmick!
-
-With the index.html file, you can see 
-your live edits to the hero section above...
-Go ahead, try it out. Feel free to go crazy
-with your web dev skills. 
-
-The on the fly syntax highlighting is made 
-possible in a manner similar to the clever
-code shown [here](https://css-tricks.com/creating-an-editable-textarea-that-supports-syntax-highlighted-code/)
-
-Although, for some reason zooming-in on iOS
-in my implementation seems to make the text
-disappear... This is a bug I am working on 
-fixing. (I might just use the original code)
-
-Anyways, continue exploring my site!
-                </code></pre>
-                <pre ><code id="app-higharea-code1" class="hljs language-html"></code></pre>
+                <div class="app-editarea" id="f-README.md">
+                <textarea class="editarea-input" id="README-input" spellcheck="false"></textarea>
+                <pre id="highlighting" aria-hidden="true" class="language-markdown"><code id="editarea-highlight"></code></pre>
               </div>
             </div>
           </div>
