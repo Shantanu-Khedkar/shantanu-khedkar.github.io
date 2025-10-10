@@ -57,6 +57,13 @@
   font-size: clamp(4.75px, 0.65vw, 0.65vw);
 }
 
+.module-keyboard-wrapper{
+      perspective: 1600px;
+  transform-style: preserve-3d;
+  width:100%;
+  position: relative;
+  display: flex;
+}
 
 .module-keyboard-keyarea{
   aspect-ratio: 14.8/5;
