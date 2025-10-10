@@ -9,8 +9,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 10%;
-  perspective: 1600px;
-  transform-style: preserve-3d;
+
 
 }
 
@@ -46,8 +45,6 @@
   aspect-ratio: 16/10.2;
   height:auto;
   background-color: #AAAAAA;
-  transform-origin: top;
-  transform: rotate3d(1,0,0,50deg);
   border-radius: 0px 0px 10px 10px;
   padding:2%;
   display: flex;
