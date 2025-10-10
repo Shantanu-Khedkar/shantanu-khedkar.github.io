@@ -200,9 +200,7 @@ width:calc(99% - 75px);
 .nav-btn:hover{
   background-color: var(--nav-btn-hover);
 }
-.nav-btn:focus{
-  background-color: var(--nav-btn-hover);
-}
+
 .nav-btn-icon{
 aspect-ratio: 1/1;
 width:2em;
