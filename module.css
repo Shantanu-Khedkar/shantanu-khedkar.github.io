@@ -407,6 +407,9 @@ padding: 1em;
   overflow: scroll;
   white-space: pre;
 }
+.app-editarea textarea::-webkit-scrollbar-corner, .app-editarea pre::-webkit-scrollbar-corner{
+  display: none;
+}
 .app-editarea textarea{
   z-index: 1;
   color: transparent;
