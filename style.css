@@ -40,6 +40,7 @@ body {
   background-color: black;
       margin: 0;
       padding:0;
+      overflow-x: clip;
 }
 html{
   overflow-x: hidden;
@@ -56,8 +57,7 @@ html{
   top:10px;
   bottom:-90px;
   margin-top:0px;
-  margin-bottom: -30px;
-  
+  z-index:100;
 }
 
 
@@ -375,5 +375,71 @@ margin:10px;
   .hero-section{
   background-image: var(--background-image-v);
   }
+}
+.about-section{
+  background-image: var(--background-image);
+  display: flex;
+  padding:30vmin;
+  position: relative;
+  box-sizing: border-box;
+  min-height:100vh;
+  justify-content: center;
+  align-items: center;
+    overflow-x: hidden;
+}
+.about-container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  background-color: rgba(8, 23, 36, 0.181);
+  aspect-ratio: 2/1;
+  gap:20px;
+
+}
+.about-image{
+  background-color: #000000;
+  border: 4px solid var(--primary);
+  flex:1;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  overflow: clip;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.about-image img{
+  aspect-ratio: 1/1;
+  height: auto;
+  border-radius: 30px;
+  width:100%;
+}
+.about-content{
+  background-color: #8b8b8b;
+  flex:1;
+  aspect-ratio: 1/1;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+@media only screen and (aspect-ratio <1/1) {
+  .about-section{
+    padding: 15vmin;
+  }
+  .about-container{
+    flex-direction: column;
+    aspect-ratio: unset;
+    align-items: stretch;
   
+  }
+  .about-content{
+    aspect-ratio: unset;
+    width:100%;
+  }
+  .about-image{
+    width:100%;
+  }
 }
