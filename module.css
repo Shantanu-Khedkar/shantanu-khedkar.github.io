@@ -507,10 +507,10 @@ textarea:focus{
 }
 }
 @media only screen and (max-width: 700px) and (max-height: 450px){
-.hero-subsection h1{
+.h1{
   font-size: 2em;
 }
-.hero-subsection h2{
+.h2{
   font-size: 1em;
 }
 .hero-subsection .hero-cta{
