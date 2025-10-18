@@ -46,22 +46,40 @@ checkWindowSize()
 
 
 window.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section'); // Select all sections
 
-	const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			const id = entry.target.getAttribute('id');
-			if (entry.intersectionRatio > 0) {
-                console.log(entry)
-                document.getElementById("n-"+id).classList.add('current')
-			} else {
-				document.getElementById("n-"+id).classList.remove('current')
-			}
-		});
-	});
+    const setActiveLink = () => {
+        var currentSection = null;
+        var maxVisibleArea = 0;
 
-	// Track all sections that have an `id` applied
-	document.querySelectorAll('section[id]').forEach((section) => {
-		observer.observe(section);
-	});
-	
+        // Check each section to see which is most visible in viewport
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const visibleArea = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(0, rect.top));
+
+            if (visibleArea > maxVisibleArea) {
+                maxVisibleArea = visibleArea;
+                currentSection = section;
+            }
+        });
+
+        // Update links
+        const currentLinkId = `n-${currentSection ? currentSection.id : ''}`;
+        const links = document.querySelectorAll('a[id^="n-"]');
+
+        // Remove 'current' class from all links and add to the current one
+        links.forEach(link => link.classList.remove('current'));
+        if (currentSection) {
+            const currentLink = document.getElementById(currentLinkId);
+            if (currentLink) {
+                currentLink.classList.add('current');
+            }
+        }
+    };
+
+    // Initial call
+    setActiveLink();
+
+    // Add scroll event listener to update on scroll
+    window.addEventListener('scroll', setActiveLink);
 });

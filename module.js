@@ -12,18 +12,6 @@ Array.from(document.getElementsByClassName("app-filebar-file")).forEach(function
 
 })
 
-Array.from(document.getElementsByClassName("nav-btn")).forEach(function(elem){
-        elem.addEventListener("click", function(e){
-    if (!this.classList.contains("current")){
-        Array.from(document.getElementsByClassName("nav-btn")).forEach(function(elem){
-            elem.classList.remove('current')
-        })
-        this.classList.toggle("current");
-        console.log(this.classList)
-    }
-})
-
-})
 
 document.getElementById('index-input').value = document.getElementById("hero-editable").innerHTML
 document.getElementById('README-input').value = "# Text Editor Module\n\nThis is a simple text editor gimmick!\n\nWith the index.html file, you can see \nyour live edits to the hero section above...\nGo ahead, try it out. Feel free to go crazy\nwith your web dev skills. \n\nThe on the fly syntax highlighting is made\npossible in a manner similar to the clever code\n(here)[https://css-tricks.com/creating-an-editable-textarea-that-supports-syntax-highlighted-code/] \nAnyways, continue exploring my site!\n"
