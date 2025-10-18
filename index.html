@@ -12,13 +12,12 @@
   <link rel="stylesheet" href="./prism/prism-gruvbox-dark.css">
   <script src="./prism/prism.js"></script>
     <link rel="stylesheet" href="module.css">
-  
 </head>
 
-<body>
+<body  onload="sectionLoaded()">
   <section class="hero-section">
     <div class="hero-subsection no-select" id="hero-editable"><!--Edit Here-->
-<h1>Shantanu Khedkar</h1>
+<h1></h1>
 <div class="hero-tagline">
   <h2>Hack</h2>
   <h2>Design</h2>
@@ -154,18 +153,18 @@
     <div class="top-nav no-select" id="top-nav">
       <a div class="logo" href="#"></a>
       <div class="nav-opt" id="nav-opt">
-        <a class="nav-btn" href="#about-section">
+        <a id="n-about-section" class="nav-btn" href="#about-section">
           <div class="nav-btn-icon"><i class="fa-solid fa-hand-peace"></i></div><span class="nav-btn-label">About</span>
         </a>
-        <a class="nav-btn">
-          <div class="nav-btn-icon"><i class="fa-solid fa-book-bookmark"></i></div><span
-            class="nav-btn-label">Blog</span>
-        </a>
-        <a class="nav-btn">
+        <a id="n-project-section" class="nav-btn" href="#project-section">
           <div class="nav-btn-icon"><i class="fa-solid fa-lightbulb"></i></div><span
             class="nav-btn-label">Projects</span>
         </a>
-        <a class="nav-btn">
+        <a id="n-blog-section" class="nav-btn">
+          <div class="nav-btn-icon"><i class="fa-solid fa-book-bookmark"></i></div><span
+            class="nav-btn-label">Blog</span>
+        </a>
+        <a id="n-contact-section" class="nav-btn">
           <div class="nav-btn-icon"><i class="fa-solid fa-link"></i></div><span class="nav-btn-label">Contact</span>
         </a>
       </div>
@@ -178,14 +177,18 @@
       <div class="about-half"><img src="./assets/profile.png"></img></div>
        <div class="about-half">
         <div class="about-info" ><h1>About</h1>
-        <p>Hello there! 👋 I am <strong>Shantanu Khedkar</strong>, an avid programmer and open source enthusiast. My passion lies in creating projects that range from <strong>microcontrollers</strong> to <strong>frontend development</strong> and <strong>graphic design</strong>. I enjoy <strong>hardware hacking</strong> and repurposing unused IoT devicea.</p>
-        <p>Apart from working with technology, playing <strong>table-tennis</strong> and <strong>cubing</strong>. I am always learing through interaction with real-world products. The design of both code and UI inspire me to create and develop.</p>
+        <p>Hello there! 👋 I am <strong>Shantanu Khedkar</strong>, an avid programmer and open source enthusiast. My passion lies in creating projects that range from <strong>microcontrollers</strong> to <strong>frontend development</strong> and <strong>graphic design</strong>. I enjoy <strong>hardware hacking</strong> and repurposing unused IoT devices.</p>
+        <p>Apart from working with technology, I enjoy playing <strong>table-tennis</strong> and <strong>cubing</strong>. I am always learing through interaction with real-world products. The design of both code and UI inspire me to create and develop.</p>
         <p>I hope to continue learning the various practices give foundation to our digital world, and contribute meaningfully to it in the future.</p>
         </div>
+  </section>
+
+    <section id="project-section" class="about-section">
   </section>
 </div>
 </body>
 
 <script src="script.js"></script>
+<script src="module.js"></script>
 
 </html>
