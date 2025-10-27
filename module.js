@@ -83,3 +83,4 @@ function typeLetter(letter){
     document.getElementById('index-input').value = document.getElementById("hero-editable").innerHTML;
     syncText(document.getElementById('index-input').value, document.getElementById('index-input').nextElementSibling)
 }
+
