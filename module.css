@@ -1,17 +1,38 @@
+
+
 .module-container{
   width: 100%;
   min-width:200px;
   max-width: 300px;
- 
+  transform: unset;
+  animation: turn cubic-bezier(0.23, 1, 0.320, 1) 1.5s;
   height:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 10%;
-
-
+  transform-style: preserve-3d;
 }
+
+@keyframes turn{
+  from {
+    transform: rotate3d(0,1,0,-20deg) translate3d(15%,0,0);
+
+  }
+  to {transform: rotate3d(0,1,0,0deg) translate3d(0,0,0);
+  }
+}
+@keyframes pop-up {
+  from {
+    transform: rotate3d(1,0,0,55deg);
+
+  }
+  to {transform: rotate3d(1,0,0,50deg);
+
+  }
+}
+
 
 .module-screen{
   width:100%;
@@ -24,6 +45,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  
 }
 .module-screen-content{
   width:94%;
@@ -41,11 +63,13 @@
 }
 
 .module-keyboard{
+  animation: pop-up cubic-bezier(0.23, 1, 0.320, 1) 1.5s backwards;
+  animation-delay: 0.5s;
   width:96%;
   aspect-ratio: 16/10.2;
   height:auto;
   background-color: var(--light-grey-1);
-  transform-origin: top;
+  transform-origin: 50% 0px;
   transform: rotate3d(1,0,0,50deg);
   border-radius: 0px 0px 10px 10px;
   padding:2%;

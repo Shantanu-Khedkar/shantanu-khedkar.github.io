@@ -21,14 +21,14 @@ function isOffscreen() {
     const rect = nav.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-    if(rect.top <0 && nav.parentElement.classList.contains('flipped')){
+    if(rect.top < -40 && nav.parentElement.classList.contains('flipped')){
         console.log('flipped')
         if(window.innerHeight > 450){
         nav.parentElement.classList.remove('flipped')
         }
     }
 
-    if(rect.top+rect.height > viewportHeight && nav.parentElement.classList.contains('responsive-nav')){
+    if(rect.top+rect.height > (viewportHeight + 40)&& nav.parentElement.classList.contains('responsive-nav')){
         console.log('flipped')
         nav.parentElement.classList.add('flipped')
     }
