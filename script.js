@@ -83,3 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Add scroll event listener to update on scroll
     window.addEventListener('scroll', setActiveLink);
 });
+
+document.getElementById("module-container").addEventListener("animationend", function(){
+    document.getElementById("module-container").style.webkitTransform = 'transform2D(0,0)'
+})
