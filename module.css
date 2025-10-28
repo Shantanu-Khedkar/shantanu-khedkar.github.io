@@ -5,6 +5,7 @@
   min-width:200px;
   max-width: 300px;
   transform: unset;
+  -webkit-transform: translate(0,0);
   animation: turn cubic-bezier(0.23, 1, 0.320, 1) 1.5s;
   height:100%;
   display: flex;
