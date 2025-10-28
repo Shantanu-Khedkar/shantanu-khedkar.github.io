@@ -18,10 +18,10 @@
 
 @keyframes turn{
   from {
-    transform: rotate3d(0,1,0,-20deg) translate3d(15%,0,0);
+    transform:  translate3d(15%,0,0);
 
   }
-  to {transform: rotate3d(0,1,0,0deg) translate3d(0,0,0);
+  to {transform: translate3d(0,0,0);
   }
 }
 @keyframes pop-up {
@@ -65,7 +65,6 @@
 
 .module-keyboard{
   animation: pop-up cubic-bezier(0.23, 1, 0.320, 1) 1.5s backwards;
-  animation-delay: 0.5s;
   width:96%;
   aspect-ratio: 16/10.2;
   height:auto;
