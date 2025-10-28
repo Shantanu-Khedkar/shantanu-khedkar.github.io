@@ -4,8 +4,6 @@
   width: 100%;
   min-width:200px;
   max-width: 300px;
-  transform: unset;
-  -webkit-transform: translate(0,0);
   animation: turn cubic-bezier(0.23, 1, 0.320, 1) 1.5s;
   height:100%;
   display: flex;
@@ -18,10 +16,10 @@
 
 @keyframes turn{
   from {
-    transform:  translate3d(15%,0,0);
+    transform:  translate(15%,0);
 
   }
-  to {transform: translate3d(0,0,0);
+  to {transform: translate(0,0);
   }
 }
 @keyframes pop-up {
