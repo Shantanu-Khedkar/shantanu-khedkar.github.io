@@ -11,6 +11,7 @@ Variable Definitions
   --light-grey-1:#c1c1c1;
   --light-grey-2:#ababab;
   --primary: #ff7800;
+
   --primary-saturated: #ff9822;
   --primary-text:#f1f1f1;
   --secondary:#b22645;
@@ -55,6 +56,9 @@ html{
   scroll-behavior: smooth;
 }
 
+p{
+  font-size: large;
+}
 
 /* Takes full screen width */
 .top-nav-wrapper{
@@ -431,11 +435,12 @@ background: -webkit-linear-gradient(225deg, var(--black) 25%, var(--black) 25%, 
 
 
 .about-section{
+  padding-top: 30px;
   background-color: var(--black);
   display: flex;
   position: relative;
   box-sizing: border-box;
-  height:max-content;
+  height:min-content;
   justify-content: center;
   align-items: center;
    overflow: clip;
@@ -444,7 +449,7 @@ background: -webkit-linear-gradient(225deg, var(--black) 25%, var(--black) 25%, 
 }
 .about-half{
 flex: 1;
-min-height: 100vh;
+min-height: max-content;
 overflow: hidden;
 position: relative;
 display: flex;
@@ -453,22 +458,14 @@ align-items: center;
 flex-direction: column;
 
 }
+
 .about-half img{
   max-width: 80vh;
   width: 80%;
   aspect-ratio: 1/1;
   border-radius: 10%;
 }
-@media only screen and (aspect-ratio < 1/1){
-  .about-section{
-    flex-direction: column;
-    justify-content: start;
-  }
-  .about-half{
-    min-height: unset;
-    flex:unset
-  }
-}
+
 .about-info{
   display:flex;
   justify-content: left;
@@ -479,3 +476,172 @@ flex-direction: column;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
+.tools-section{
+  padding:10px;
+
+  top:0px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.tools-section h1{
+
+
+width:100%;
+  text-align: center;
+}
+
+.tools-section p{
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top:10px;
+  text-align: left;
+}
+@media only screen and (aspect-ratio < 1.25/1){
+  .about-section{
+    flex-direction: column;
+    justify-content: start;
+  }
+  .about-half{
+    min-height: unset;
+    flex:unset
+  }
+  .about-half img{
+    margin-bottom: 0;
+  }
+  .tools-section h1{
+  flex:1;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.tools-section p{
+  width: 100%;
+}
+}
+
+
+
+.stack{
+  display:flex;
+
+  perspective: 1000px;
+
+  position: relative;
+justify-content: center;
+align-content: center;
+  gap:20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.stack-grid{
+  
+  
+  display:grid;
+  grid-template-columns: auto auto auto;
+  height: min-content;
+  background-color: var(--dark-grey);
+  padding: 16px;
+  gap:16px;
+  border-radius: 30px;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.5s;
+  max-width: 25%;
+  min-width: min-content;
+  border: 2px solid var(--dark-grey-2)
+}
+.stack-grid::before{
+  content:attr(label);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  color:var(--primary-text)
+}
+.stack-grid:nth-of-type(2)::before{
+  grid-column-end: 3;
+}
+
+.stack-grid:nth-of-type(2){
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  max-width: min-content;
+  align-items: start;
+}
+
+.stack-grid span:nth-of-type(n+4):nth-of-type(3n):after{
+  min-height: 2.5em;
+}
+
+
+.stack-grid:hover{
+  transform: translateZ(10px) rotateX(10deg) ;
+  border: 2px solid var(--light-grey-2)
+}
+
+.stack-grid:nth-of-type(2) span{
+  max-width: min-content;
+  margin-right:0px ;
+  margin-left: 0px;
+  min-width: unset;
+}
+.stack-grid i{
+  --radius:inherit;
+  border-radius: 23px;
+  display: block;
+  padding:2.5px;
+  aspect-ratio: 1/1;
+  font-size: 4.5em;
+  background-color: var(--dark-grey-1);
+  transition: all 0.2s;
+  z-index: 1;
+  position: relative;
+  transform: translateZ(1px);
+  align-content: center;
+    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid var(--dark-grey-2);
+  box-sizing: border-box;
+    color:var(--primary-text)
+  }
+
+.stack-grid i:hover{
+  transform: scale(1.01);
+  border: 2px solid var(--primary-saturated);
+  transition: all 0s;
+  background-color: var(--dark-grey-2);
+  box-shadow: 0 0 10px 0px var(--black);
+  }
+.stack-grid span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: max-content;
+
+}
+.stack-grid span::after{
+  content:attr(label);
+  display:block;
+  width:100%;
+  text-align: center;
+  padding:2px;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+  max-width: 120%;
+  word-wrap: break-word;
+  line-height: 1.25em;
+  min-height: 2em;
+  font-size: 1em;
+  
+}  
+
+
+

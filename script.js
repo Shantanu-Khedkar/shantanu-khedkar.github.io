@@ -87,3 +87,5 @@ window.addEventListener('DOMContentLoaded', () => {
 document.getElementById("module-container").addEventListener("animationend", function(){
     document.getElementById("module-container").style.webkitTransform = 'translate(0,0)'
 })
+
+
