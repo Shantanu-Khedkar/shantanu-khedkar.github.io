@@ -69,9 +69,10 @@ p{
   bottom:-90px;
   margin-top:0px;
   z-index:100;
+box-shadow: 0 0px 20px 20px var(--black);
+background-color: var(--black);
+
 }
-
-
 
 /* Main nav element */
 
@@ -83,7 +84,7 @@ p{
   display: inline-flex;
   border-radius: 100px;
   background-color: var(--dark-grey);
-  box-shadow: 0 0 10px 0px var(--black);
+  
 }
 .top-nav-wrapper:has(.flipped){
   bottom:1%;
@@ -120,7 +121,8 @@ top:0px;
   border-radius: 100px;
   width: 48px;
   justify-content: center;
-  background-color: var(--black)
+  background-color: var(--black);
+  
 }
 
 .menu-btn i{
@@ -208,11 +210,14 @@ width:calc(99% - 75px);
   gap:20px;
   border-radius: 30px;
   position:relative;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  
 }
 .nav-btn:hover{
   background-color: var(--dark-grey-2);
+  box-shadow: 0 0 10px 0px var(--black);
 }
+
 .nav-btn::after{
   position:absolute;
   content:"";
@@ -247,16 +252,16 @@ width:2em;
 padding:4px;
 border-radius: 100px;
 background-color: var(--black);
-    
+    transition: all 0.2s;
   display:flex;
   justify-content: center;
-  
+  color: var(--primary)
 }
 .nav-btn-icon i{
 align-content: center;
 height: auto;
 font-size:1.5em ; /* Fontawesome font-size * 1.5*/
-color: var(--primary)
+color: inherit;
 }
 
 /* Button Text */
@@ -322,8 +327,7 @@ color: var(--primary)
 section{
   display: flex;
   padding:10px;
-  
-  
+background-color: var(--black);
 }
 
 .hero-section{
@@ -437,7 +441,7 @@ background: -webkit-linear-gradient(225deg, var(--black) 25%, var(--black) 25%, 
 
 .about-section{
   padding-top: 30px;
-  background-color: var(--black);
+  
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -548,6 +552,7 @@ align-content: center;
   font-size: 2em;
   color:var(--primary-text);
   min-width:150px;
+  font-weight: bold;
 }
 .stack-grid:nth-of-type(2)::before{
   grid-column-end: 3;
@@ -586,14 +591,14 @@ align-content: center;
     background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 2px solid var(--dark-grey-2);
+  border: 2px solid var(--dark-grey-1);
   box-sizing: border-box;
     color:var(--primary-text);
   }
 
 .stack-grid i:hover{
   transform: scale(1.01);
-  border: 2px solid var(--light-grey-2);
+  border: 2px solid var(--dark-grey-2);
   transition: all 0s;
   background-color: var(--dark-grey-2);
   box-shadow: 0 0 10px 0px var(--black);
@@ -728,6 +733,7 @@ padding-bottom: 5px;
   background-color: var(--dark-grey-1);
   padding:5px;
   box-sizing: border-box;
+  gap:5px;
 
 }
 .project-cta a{
@@ -759,7 +765,6 @@ padding-bottom: 5px;
 }
 .project-cta a:hover{
   background: var(--dark-grey-2);
-  
 
 }
 
