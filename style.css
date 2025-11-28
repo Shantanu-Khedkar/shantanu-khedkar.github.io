@@ -151,6 +151,7 @@ color: var(--primary);
 }
 
 
+
 .responsive-nav .nav-opt{
   flex-direction: column;
   position: absolute;
@@ -634,6 +635,7 @@ align-content: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .project-section h1{
   text-align: center;
@@ -707,7 +709,7 @@ width:100%;
 }
 .project-card .project-info p:nth-of-type(2){
 flex:1;
-overflow: scroll;
+overflow:hidden;
 margin: 0px;
 font-size:1em;
 padding-bottom: 5px;
@@ -822,3 +824,49 @@ min-height: 1em;
   
 }  
 } 
+
+section.contact-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+section.contact-section h1{
+  margin-bottom: 0px;
+}
+section.contact-section ul{
+  list-style-type:none;
+  list-style-position: inside;
+  padding: 0px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 3em;
+  gap:0.8em
+}
+section.contact-section li{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  width:2em;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  border: 2px solid var(--dark-grey);
+}
+section.contact-section i{
+    align-content: center;
+    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+display: block;
+}
+section.contact-section span{
+  font-size: 0.4em;
+}
+section.contact-section a{
+  all: unset;
+}
