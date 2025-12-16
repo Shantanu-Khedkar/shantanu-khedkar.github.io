@@ -249,7 +249,7 @@ aspect-ratio: 4/1;
   aspect-ratio: 5.1/1;
 }
 .key-pressed{
-  border-bottom: 2px solid light-dark(var(--dark-grey-1),var(--light-grey-1));
+ /* border-bottom: 2px solid light-dark(var(--dark-grey-1),var(--light-grey-1));*/
 }
 
 .key-pressed::after{
@@ -263,7 +263,7 @@ aspect-ratio: 4/1;
 }
 
 .keyarea-key:hover{
-  border-bottom: 2px light-dark(var(--dark-grey-1),var(--light-grey-1));
+ /* border-bottom: 2px solid light-dark(var(--dark-grey-1),var(--light-grey-1));*/
 }
 
 .keyarea-key:hover::after{
