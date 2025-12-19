@@ -88,4 +88,25 @@ document.getElementById("module-container").addEventListener("animationend", fun
     document.getElementById("module-container").style.webkitTransform = 'translate(0,0)'
 })
 
+var r = document.querySelector(':root');
 
+function extractVariableNames(line){
+    return line.split(" ")[0].slice(2, -1).split("_")
+}
+function packCSS(a, b){
+    return "--"+a+"_"+b
+}
+
+colorHandlerCSS = document.getElementById("colorHandlers").innerText.trim()
+colorHandlerCSS = colorHandlerCSS.slice(10,-2)
+colorHandlerCSS = colorHandlerCSS.split("\n")
+colorHandlerCSS = colorHandlerCSS.map(line => extractVariableNames(line));
+
+
+function toggleTheme(toggle){
+    
+    colorHandlerCSS.forEach(function(pair){setProperty(packCSS(pair[0],pair[1]), pair[toggle])})
+}
+function setProperty(propertyName, propertyValue){
+    r.style.setProperty(propertyName, 'var(--'+propertyValue+')');
+}

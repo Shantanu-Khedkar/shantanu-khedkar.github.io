@@ -10,7 +10,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: light-dark(var(--primary-text-black),var(--primary-text));/* fg1 / fg */
+	color: var(--primary-text);
 	font-family: Consolas, Monaco, "Andale Mono", monospace;
 	direction: ltr;
 	text-align: left;
@@ -33,8 +33,8 @@ pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
-	color: light-dark(var(--primary-text-black),var(--primary-text)); /* fg0 */
-	background: light-dark(var(--light-grey-1),var(--dark-grey-1)); /* bg4 */
+	color: var(--primary-text);
+	background: var(--dark-grey-1);
 }
 
 pre[class*="language-"]::selection,
@@ -42,7 +42,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
 	color: #fbf1c7; /* fg0 */
-	background:light-dark(var(--light-grey-1),var(--dark-grey-1)); /* bg4 */
+	background: var(--dark-grey-1);
 }
 
 /* Code blocks */
@@ -54,7 +54,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: light-dark(var(--white),var(--dark-grey)); /* bg0_h */
+	background: var(--dark-grey); /* bg0_h */
 }
 
 /* Inline code */
@@ -66,7 +66,7 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.cdata {
-	color: light-dark(#575046,#a89984); /* fg4 / gray1 */
+	color: #a89984; /* fg4 / gray1 */
 }
 
 .token.delimiter,
@@ -76,64 +76,61 @@ pre[class*="language-"] {
 .token.important,
 .token.atrule {
 	color: #fb4934; /* red2 */
-	
 }
 
 .token.operator,
-.token.punctuation{
-	color: light-dark(#575046,#a89984); /* fg4 / gray1 */
+.token.punctuation {
+	color: #a89984; /* fg4 / gray1 */
 }
 
-
-
 .token.attr-name {
-	color: light-dark(#a5451c,#e67c4f);/* peach1 */
+	color: #e67c4f; /* peach1 */
 }
 .token.tag,
 .token.doctype,
 .token.builtin {
-	color: light-dark(#cb7c07,#faa92f);; /* yellow2 */
+	color: #faa92f; /* yellow2 */
 }
 
-.token.tag .punctuation{
-	color: light-dark(#575046,#a89984); /* fg4 / gray1 */
+.token.tag .punctuation {
+	color: #a89984; /* fg4 / gray1 */
 }
 
 .token.entity,
 .token.number,
 .token.symbol {
-	color:light-dark(#6f4550,#d3869b); /* purple2 */
+	color: #d3869b; /* purple2 */
 }
 
 .token.property,
 .token.constant,
 .token.variable {
-	color: light-dark(#a5451c,#e67c4f); /* peach1 */
+	color: #e67c4f; /* peach1 */
 }
 
 .token.string,
 .token.char {
-	color: light-dark(#966312,#bb8226); /* green2 */
+	color: #bb8226; /* green2 */
 }
 
-.token.attr-value{
-	color: light-dark(#a94136,#fb7668); /* red1 */
+.token.attr-value {
+	color: #fb7668; /* red1 */
 }
 .token.attr-value .punctuation {
-	color: light-dark(#a5451c,#e67c4f);/* fg4 / gray1 */
+	color: #e67c4f; /* fg4 / gray1 */
 }
 
 .token.url {
-	color:light-dark(#966312,#bb8226); /* green2 */
+	color: #bb8226; /* green2 */
 	text-decoration: underline;
 }
 
 .token.function {
-	color: light-dark(#cb7c07,#faa92f);; /* yellow2 */
+	color: #faa92f; /* yellow2 */
 }
 
 .token.regex {
-	color: light-dark(#966312,#bb8226); /* green2 */
+	color: #bb8226; /* green2 */
 }
 
 .token.bold {
@@ -145,7 +142,7 @@ pre[class*="language-"] {
 }
 
 .token.inserted {
-	background: light-dark(#a5451c,#e67c4f);/* fg4 / gray1 */
+	background: #e67c4f; /* fg4 / gray1 */
 }
 
 .token.deleted {
