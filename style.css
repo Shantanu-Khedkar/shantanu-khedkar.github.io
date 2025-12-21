@@ -76,17 +76,21 @@ top:0px;
 }
 
 .menu-btn {
-  aspect-ratio: 1/1;
+  aspect-ratio: 2/1;
   margin: 5px;
   margin-left: -48px;
   display:none;
   float: right;
   border-radius: 100px;
-  width: 48px;
-  justify-content: center;
-  background-color: var(--white_black)
+  height: 50px;
+
+  justify-content: space-evenly;
   
+  display:flex;
+  background-color: var(--white_black);
+  transition: all 0.2s;
 }
+
 
 .menu-btn i{
   align-content: center;
@@ -94,7 +98,14 @@ height: auto;
 font-size:1.5em;
 color: var(--primary);
 }
-
+.mobile-toggle{
+  position: fixed;
+  bottom:20px;
+  left:50%;
+  display: none;
+  background-color: var(--purew_dark-grey);
+  box-shadow: 0 0 10px 0px var(--light-grey-2_black)
+  }
 /* Navbar Options, wrapper for nav-btn, changes for responsive behaviour */
 
 .nav-opt {
@@ -153,7 +164,9 @@ color: var(--primary);
   background-color: var(--purew_dark-grey);
   border-radius: 0px 0px 30px 30px; /* 60px/2 */
 }
-
+.responsive-nav .mobile-toggle{
+  display: inline-flex;
+}
 
 
 .flipped:not(.covered) .nav-opt  {
@@ -164,7 +177,10 @@ color: var(--primary);
   padding-top: 10px;
   border-radius: 30px 30px 0px 0px; /* 60px/2 */
 }
-
+.flipped:not(.covered) .mobile-toggle{
+  bottom: unset;
+  top:20px;
+}
 .covered.responsive-nav .nav-opt{
   width:calc(100vw - 20px);
   border-radius: 0px;
@@ -195,19 +211,19 @@ width:calc(99% - 75px);
 
 .nav-btn {
   background-color: var(--white_dark-grey-1);
-  padding: 3px;
+  padding: 5.5px;
   align-self: center;
   display:inline-flex;
   gap:20px;
   border-radius: 30px;
   position:relative;
   transition: box-shadow 0.2s, background-color 0.2s, border 0.2s;
-  border:1.5px solid var(--white_dark-grey-1);
+
 }
 .nav-btn:hover{
   background-color: var(--light-grey_dark-grey-2);
-  border: 1.5px solid var(--light-grey-1_dark-grey-2);  
-  box-shadow: 0px 0px 10px 0px var(--light-grey-1_clear);
+ 
+  box-shadow: 0px 0px 10px 0px var(--light-grey_clear);
 }
 
 
@@ -251,13 +267,12 @@ border-radius: 100px;
   color: var(--primary);
   
   background-color: var(--purew_black);
-  border: 2px solid  var(--purew_clear);
+  
  
 }
 .nav-btn:hover .nav-btn-icon{
-  box-shadow: 0 0 10px 0px var(--light-grey-1_black) inset;
   background-color: var(--purew_black);
-  border: 2px solid  var(--light-grey-1_clear);
+ 
 }
 
 .nav-btn-icon i{
@@ -278,9 +293,6 @@ color: inherit;
 }
 
 @media only screen and (max-width: 1024px) {
-  .menu-btn {
-    display:flex; /* Show menu-btn*/
-  }
   .nav-opt .nav-btn:nth-of-type(4):not(.responsive-nav .nav-btn){ /* Hide Button */
     display: none;
   }

@@ -61,6 +61,8 @@
 --light-grey-2_dark-grey-2:         var(--light-grey-2);
 --dark-grey-2_black:                var(--dark-grey-2);
 --light-grey_dark-grey-1:           var(--light-grey);
+--light-grey_clear:           var(--light-grey);
+--light-grey-1_dark-grey:           var(--light-grey);
 }
 
     </style>
@@ -224,8 +226,9 @@
         </a>
       </div>
       <a class="menu-btn" onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"
-        id="menu-btn"><i class="fa-solid fa-bars"></i></a>
-
+        id="menu-btn"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
+      <a class="menu-btn mobile-toggle" onclick="toggleTheme()"
+        id="mobile-toggle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
     </div>
   </div>
   <section id="about-section" class="about-section">
