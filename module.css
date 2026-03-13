@@ -428,6 +428,7 @@ padding: 1em;
   left: 0px;
   margin: 0px;
   overflow: scroll;
+  color-scheme: dark;
   white-space: pre;
 }
 .app-editarea textarea::-webkit-scrollbar-corner, .app-editarea pre::-webkit-scrollbar-corner{

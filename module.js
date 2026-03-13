@@ -74,13 +74,25 @@ async function sectionLoaded(){
         typeLetter(letter)
         await new Promise(resolve => setTimeout(resolve, Math.max(Math.random(), 0.5)*140));
     }
-    
+    Array.from(document.getElementsByClassName("key-letter")).forEach(function(key){key.classList.remove("key-pressed")})
 }
 
 
 function typeLetter(letter){
+  
     document.getElementById("hero-editable").children[0].textContent = document.getElementById("hero-editable").children[0].textContent + letter 
+    Array.from(document.getElementById("hero-editable").children).forEach(function(elem){
+        elem.removeAttribute('style')
+        console.log(elem)
+    })
     document.getElementById('index-input').value = document.getElementById("hero-editable").innerHTML;
     syncText(document.getElementById('index-input').value, document.getElementById('index-input').nextElementSibling)
+    if (letter != " "){
+    document.getElementsByClassName("key-spce")[0].classList.remove("key-pressed")
+    Array.from(document.getElementsByClassName("key-letter")).forEach(function(key){if(key.innerText == letter.toUpperCase()){key.classList.add("key-pressed")}else{key.classList.remove("key-pressed")}})
+    }else{
+        document.getElementsByClassName("key-spce")[0].classList.add("key-pressed")
+    }
 }
 
+sectionLoaded()

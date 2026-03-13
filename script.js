@@ -26,6 +26,7 @@ function enableAllTransitions() {
     const allElements = document.querySelectorAll('*');
     allElements.forEach(element => {
         element.style.transition = '';  // Reset the transition property
+       
     });
 }
 

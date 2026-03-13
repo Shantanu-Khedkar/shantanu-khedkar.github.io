@@ -271,7 +271,7 @@ border-radius: 100px;
  
 }
 .nav-btn:hover .nav-btn-icon{
-  background-color: var(--purew_black);
+  background-color: var(--white_black);
  
 }
 
@@ -712,7 +712,8 @@ width:100%;
 .project-card img:hover{
 
 
-  box-shadow: 0 0 10px 0px var(--dark-grey-2_black);
+  box-shadow: 0 0 10px 0px var(--light-grey-2_black);
+  
   transform: scale(1.01);
   position: relative;
 }
