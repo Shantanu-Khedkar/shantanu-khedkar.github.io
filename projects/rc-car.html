@@ -1,0 +1,141 @@
+<!Doctype HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../theme.css">
+  <link rel="stylesheet" href="../style.css">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1 maximum-scale=1 user-scalable=no" />
+  <link href="../fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="../fontawesome/css/solid.css" rel="stylesheet" />
+  <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../prism/prism-gruvbox-dark.css">
+  <script src="../prism/prism.js"></script>
+  <link rel="stylesheet" href="../module.css">
+  <style id = "mainColors">
+    :root {
+    --background-image:url("../assets/backgroundDark.j");
+  --background-image-v:url("../assets/backgroundDark-V.jeg");
+  
+  /* Main Colors */
+  --black:#101010;
+  --white:#f0f0f0;
+  --dark-grey:#232323;
+  --dark-grey-1: #3c3c3c;
+  --dark-grey-2: #4c4c4c;
+  --light-grey:#d9d9d9;
+  --light-grey-1:#c1c1c1;
+  --light-grey-2:#ababab;
+  --primary: #ff7800;
+
+  --primary-saturated: #ff9822;
+  --primary-text:#f1f1f1;
+  --primary-text-black:#010101;
+  --secondary:#b22645;
+  --secondary-saturated:#f6505d;
+  --purew:white;
+  --pureb:black;
+  --clear:rgba(0,0,0,0)
+    }
+  </style>
+  <style id="colorHandlers">
+:root {  
+--white_black:                      var(--white);
+--primary-text-black_primary-text:  var(--primary-text-black);
+--purew_dark-grey:                  var(--purew);
+--purew_black:                      var(--purew);
+--purew_clear:                      var(--purew);
+--light-grey-2_black:               var(--light-grey-2);
+--light-grey_dark-grey:             var(--light-grey);
+--light-grey-2_clear:               var(--light-grey-2);
+--white_dark-grey-1:                var(--white);
+--light-grey_dark-grey-2:           var(--light-grey);
+--light-grey-1_dark-grey-1:         var(--light-grey-1);
+--light-grey-1_dark-grey-2:         var(--light-grey-1);
+--light-grey-1_clear:               var(--light-grey-1);
+--light-grey-1_black:               var(--light-grey-1);
+--purew_pureb:                      var(--purew);
+--secondary-saturated_secondary:    var(--secondary-saturated);
+--white_dark-grey:                  var(--white);
+--light-grey-2_dark-grey-2:         var(--light-grey-2);
+--dark-grey-2_black:                var(--dark-grey-2);
+--light-grey_dark-grey-1:           var(--light-grey);
+--light-grey_clear:           var(--light-grey);
+--light-grey-1_dark-grey:           var(--light-grey);
+}
+
+    </style>
+</head>
+
+<body>
+<div class="top-nav-wrapper" >
+    <div class="top-nav no-select" id="top-nav">
+      <a div class="logo" href="../index.html"></a>
+      <div class="nav-shadow"  onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"></div>
+      <a class="nav-title" href="../projects.html">
+          <div class="nav-title-icon"><i class="fa-solid fa-arrow-circle-left"></i></div><span class="nav-title-label">Arudino RC Car</span>
+        </a>
+      <div class="nav-opt nav-title-opt" id="nav-opt" style="padding: 0px;">
+       <!--<a class="nav-btn" href="#overview"><span class="nav-btn-label label-center">Overview</span></a>-->
+      </div>
+      <a id="menu-btn" style="display: none;"><br><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
+      <a class="menu-btn-fixed" onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"
+        id="menu-btn-fixed"><i class="fa-solid fa-bars"></i></a>
+
+
+      <a class="menu-btn mobile-toggle" onclick="toggleTheme()"
+        id="mobile-toggle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
+
+    </div>
+  </div>
+  <section class="project-viewer">
+    <div class="gallery-wrapper">
+    <div class="gallery" id="gallery">
+      <div class="gallery-controls" id="gallery-controls"><i class="fa-solid fa-arrow-circle-left" onclick="changeMedia(-1)"></i><i class="fa-solid fa-arrow-circle-right" onclick="changeMedia(1)"></i></div>
+    <video alt="RC Car Demo" class="media" src="../assets/projects/RC-Car/oust.mp4" autoplay="true" loop muted="true" controls></video>
+    <img alt="RC Car" class="media" src="../assets/projects/RC-Car/RC-Car.png" style="display:none"></img>
+    <img alt="RC Car Internals" class="media" src="../assets/projects/RC-Car/wires.png" style="display:none"></img>
+    </div>
+    <div class="overview">
+      <h1>Overview</h1>
+      <p>The Arduino based RC (rather IR) operated toy car is a simple motor-controller circuit housed inside a metal chasis, which can interpret IR signals from a TV remote. <br>The toy car is made almost completely of scrap materials and components.
+        It's orange frame is actually a broken geomenty box, and even the Arduino inside is an old board whose USB port had come off. <br> The IR receiver was sourced from a cheap malfunctioning audio device destined to end up in an e-waste bin, and the DC motor was taken from an old toy.<br>
+        Finally, the TV remote itself was of an old STB and not in use.<br> Even with these misfit components the aim was to create a coherent and somewhat decent looking car.
+      </p>
+        
+
+      </div>
+    </div>
+    <div class="main-content">
+<h2>Tool Used</h2>
+      <div class="tools-list">
+        <div><b>Arduino (RedBoard)</b>Microcontoller</div>
+        <div><b>Arduino IDE</b>Text Editor & Compiler</div>
+        <div><b>Arduino ISP</b>Sketch to Program Over ISCP Using Another Arduino</div>
+        <div><b>Hot Glue Gun</b>Fixing Motor and Servo</div>
+        <div><b>Zero-PCB</b>Platform for Motor-Controller Circuit</div>
+        <div><b>Soldering Iron</b>Working on The Zero-PCB</div>
+
+        
+      </div>
+<h2>Approach</h2>
+<p>
+  I started this project on a breadboard and with an Arduino that had a working USB port.<br> Following a guide to build a motor controller using a diode and resistors, I layed out the circuit on the breadboard using jumper wires.<br> Once the motor circuit worked, I added a servo and the IR reciever to the board.<br> To reduce the size of the circuit, I decided to solder the components on a Zero-PCB. As I did not want to permanently use the reciever, motor and the servo in this project, I added header pins which could connect to jumper wires.<br>Also, I had an unused Arduino with a broken USB port which I thought would be sufficient as the car wont be connected to the computer except for while programming. So, to program it I used the other Arduino and the ISP sketch which allowed me to upload code directly without using USB Serial. <br> At this stage it was still spread out on a table and only after I confirmed all functions were working, did I start to make a cardboard frame.<br>
+  The cardboard version lasted for exactly one day of testing, and quickly fell apart. It was time to find a more rigid solution. I did think of designing and 3D printing a model, but then saw a broken metal box lying around which looked perfect for the job. With some hot-glue and double sided tape, I affixed the components, and did minimal cable management.
+</p>
+
+<h2>Learnings</h2>
+<p>This project gave me insight into how motor controllers work, and was my first time working on a Zero-PCB. I gained valuable experience soldering thru-hole with flux (and desoldering with a solder sucker, as I made quite a mess from time to time)
+</p>   
+<h2>Next Steps</h2>
+<p>I would like to explore PCB designing and printing to minimise messy solder work and build more robust projects.<br> The car could also have many other sensors (ultrasonic, camera etc.) to facillitate autonomous navigation.<br> It would be interesting to explore other mechanisms for wheel turning, including four-wheel drive.
+</p>    
+</div>
+
+    </section>
+</body>
+
+<script src="../script.js"></script>
+<script src="../gallery.js"></script>
+</html>

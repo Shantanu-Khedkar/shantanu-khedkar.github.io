@@ -782,13 +782,14 @@ width:100%;
 }
 
 .project-card .img-container{
-  
+  all: unset;
   transition: all 0.2s;
   flex-grow:1;
   width: 100%;
   aspect-ratio: 3 / 2;
-  
+  display: block;
   position: relative;
+  text-decoration: none;
 }
 .project-card img{
   transition: all 0.2s;
