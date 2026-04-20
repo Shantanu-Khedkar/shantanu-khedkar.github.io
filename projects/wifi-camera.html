@@ -13,58 +13,59 @@
   <link rel="stylesheet" href="../prism/prism-gruvbox-dark.css">
   <script src="../prism/prism.js"></script>
   <link rel="stylesheet" href="../module.css">
-  <style id="mainColors">
+  <style id = "mainColors">
     :root {
-      --background-image: url("../assets/backgroundDark.j");
-      --background-image-v: url("../assets/backgroundDark-V.jeg");
+    --background-image:url("../assets/backgroundDark.j");
+  --background-image-v:url("../assets/backgroundDark-V.jeg");
+  
+  /* Main Colors */
+  --black:#101010;
+  --white:#f0f0f0;
+  --dark-grey:#232323;
+  --dark-grey-1: #3c3c3c;
+  --dark-grey-2: #4c4c4c;
+  --light-grey:#d9d9d9;
+  --light-grey-1:#c1c1c1;
+  --light-grey-2:#ababab;
+  --primary: #ff7800;
 
-      /* Main Colors */
-      --black: #101010;
-      --white: #f0f0f0;
-      --dark-grey: #232323;
-      --dark-grey-1: #3c3c3c;
-      --dark-grey-2: #4c4c4c;
-      --light-grey: #d9d9d9;
-      --light-grey-1: #c1c1c1;
-      --light-grey-2: #ababab;
-      --primary: #ff7800;
-
-      --primary-saturated: #ff9822;
-      --primary-text: #f1f1f1;
-      --primary-text-black: #010101;
-      --secondary: #b22645;
-      --secondary-saturated: #f6505d;
-      --purew: white;
-      --pureb: black;
-      --clear: rgba(0, 0, 0, 0)
+  --primary-saturated: #ff9822;
+  --primary-text:#f1f1f1;
+  --primary-text-black:#010101;
+  --secondary:#b22645;
+  --secondary-saturated:#f6505d;
+  --purew:white;
+  --pureb:black;
+  --clear:rgba(0,0,0,0)
     }
   </style>
   <style id="colorHandlers">
-    :root {
-      --white_black: var(--white);
-      --primary-text-black_primary-text: var(--primary-text-black);
-      --purew_dark-grey: var(--purew);
-      --purew_black: var(--purew);
-      --purew_clear: var(--purew);
-      --light-grey-2_black: var(--light-grey-2);
-      --light-grey_dark-grey: var(--light-grey);
-      --light-grey-2_clear: var(--light-grey-2);
-      --white_dark-grey-1: var(--white);
-      --light-grey_dark-grey-2: var(--light-grey);
-      --light-grey-1_dark-grey-1: var(--light-grey-1);
-      --light-grey-1_dark-grey-2: var(--light-grey-1);
-      --light-grey-1_clear: var(--light-grey-1);
-      --light-grey-1_black: var(--light-grey-1);
-      --purew_pureb: var(--purew);
-      --secondary-saturated_secondary: var(--secondary-saturated);
-      --white_dark-grey: var(--white);
-      --light-grey-2_dark-grey-2: var(--light-grey-2);
-      --dark-grey-2_black: var(--dark-grey-2);
-      --light-grey_dark-grey-1: var(--light-grey);
-      --light-grey_clear: var(--light-grey);
-      --light-grey-1_dark-grey: var(--light-grey);
-    }
-  </style>
+:root {  
+--white_black:                      var(--white);
+--primary-text-black_primary-text:  var(--primary-text-black);
+--purew_dark-grey:                  var(--purew);
+--purew_black:                      var(--purew);
+--purew_clear:                      var(--purew);
+--light-grey-2_black:               var(--light-grey-2);
+--light-grey_dark-grey:             var(--light-grey);
+--light-grey-2_clear:               var(--light-grey-2);
+--white_dark-grey-1:                var(--white);
+--light-grey_dark-grey-2:           var(--light-grey);
+--light-grey-1_dark-grey-1:         var(--light-grey-1);
+--light-grey-1_dark-grey-2:         var(--light-grey-1);
+--light-grey-1_clear:               var(--light-grey-1);
+--light-grey-1_black:               var(--light-grey-1);
+--purew_pureb:                      var(--purew);
+--secondary-saturated_secondary:    var(--secondary-saturated);
+--white_dark-grey:                  var(--white);
+--light-grey-2_dark-grey-2:         var(--light-grey-2);
+--dark-grey-2_black:                var(--dark-grey-2);
+--light-grey_dark-grey-1:           var(--light-grey);
+--light-grey_clear:           var(--light-grey);
+--light-grey-1_dark-grey:           var(--light-grey);
+}
+
+    </style>
 </head>
 
 <body>
@@ -93,11 +94,10 @@
       <div class="gallery" id="gallery">
         <div class="gallery-controls" id="gallery-controls"><i class="fa-solid fa-arrow-circle-left"
             onclick="changeMedia(-1)"></i><i class="fa-solid fa-arrow-circle-right" onclick="changeMedia(1)"></i></div>
-        <!--<video alt="SpeakSign Demo" class="media" src="../assets/projects/SparkCube/demo.mp4" autoplay="true" loop
-          muted="true" controls></video>-->
-        <img alt="Main Dashboard" class="media" src="../assets/projects/WiFi-Camera/WiFi-Cam.png"
+        <video alt="Camera Demo" class="media" src="../assets/projects/WiFi-Camera/Demo.mp4" autoplay="true" loop muted="true" controls></video>
+        <img alt="Streaming Screenshot" class="media" src="../assets/projects/WiFi-Camera/WiFi-Cam.png"
           style="display:block"></img>
-        <img alt="Speak Sign Logo" class="media" src="../assets/projects/WiFi-Camera/Polaroid-Wave.png" style="display:none"></img>
+        <img alt="Product Image" class="media" src="../assets/projects/WiFi-Camera/Polaroid-Wave.png" style="display:none"></img>
       </div>
       <div class="overview">
         <h1>Overview</h1>
@@ -147,7 +147,7 @@
         This device is branded by Polaroid, but its original manufacturer is Jeilin, which doesnt share much firmware,
         or
         other information on its website. So, tracking down this specific camera was not possible, and I could not
-        find anything useful to take a look at. Although the FCC-ID was provided most of the licence files were confidential and those that were not, did not reveal any new informatrion.<br> On the hardware side, the camera build extremely compact and prying
+        find anything useful to take a look at. Although the FCC-ID was provided most of the licence files were confidential and those that were not, did not reveal any new information.<br> On the hardware side, the camera build extremely compact and prying
         it open was a very difficult task, The PCB traces are also confusing and don't indicate obvious UART ports.
         Putting the camera back together was twice as difficult, as the battery had to be carefully oriented.<br>
 
@@ -165,5 +165,4 @@
 
 <script src="../script.js"></script>
 <script src="../gallery.js"></script>
-
 </html>
