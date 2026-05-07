@@ -13,59 +13,58 @@
   <link rel="stylesheet" href="../prism/prism-gruvbox-dark.css">
   <script src="../prism/prism.js"></script>
   <link rel="stylesheet" href="../module.css">
-  <style id = "mainColors">
+  <style id="mainColors">
     :root {
-    --background-image:url("../assets/backgroundDark.j");
-  --background-image-v:url("../assets/backgroundDark-V.jeg");
-  
-  /* Main Colors */
-  --black:#101010;
-  --white:#f0f0f0;
-  --dark-grey:#232323;
-  --dark-grey-1: #3c3c3c;
-  --dark-grey-2: #4c4c4c;
-  --light-grey:#d9d9d9;
-  --light-grey-1:#c1c1c1;
-  --light-grey-2:#ababab;
-  --primary: #ff7800;
+      --background-image: url("../assets/backgroundDark.j");
+      --background-image-v: url("../assets/backgroundDark-V.jeg");
 
-  --primary-saturated: #ff9822;
-  --primary-text:#f1f1f1;
-  --primary-text-black:#010101;
-  --secondary:#b22645;
-  --secondary-saturated:#f6505d;
-  --purew:white;
-  --pureb:black;
-  --clear:rgba(0,0,0,0)
+      /* Main Colors */
+      --black: #101010;
+      --white: #f0f0f0;
+      --dark-grey: #232323;
+      --dark-grey-1: #3c3c3c;
+      --dark-grey-2: #4c4c4c;
+      --light-grey: #d9d9d9;
+      --light-grey-1: #c1c1c1;
+      --light-grey-2: #ababab;
+      --primary: #ff7800;
+
+      --primary-saturated: #ff9822;
+      --primary-text: #f1f1f1;
+      --primary-text-black: #010101;
+      --secondary: #b22645;
+      --secondary-saturated: #f6505d;
+      --purew: white;
+      --pureb: black;
+      --clear: rgba(0, 0, 0, 0)
     }
   </style>
   <style id="colorHandlers">
-:root {  
---white_black:                      var(--white);
---primary-text-black_primary-text:  var(--primary-text-black);
---purew_dark-grey:                  var(--purew);
---purew_black:                      var(--purew);
---purew_clear:                      var(--purew);
---light-grey-2_black:               var(--light-grey-2);
---light-grey_dark-grey:             var(--light-grey);
---light-grey-2_clear:               var(--light-grey-2);
---white_dark-grey-1:                var(--white);
---light-grey_dark-grey-2:           var(--light-grey);
---light-grey-1_dark-grey-1:         var(--light-grey-1);
---light-grey-1_dark-grey-2:         var(--light-grey-1);
---light-grey-1_clear:               var(--light-grey-1);
---light-grey-1_black:               var(--light-grey-1);
---purew_pureb:                      var(--purew);
---secondary-saturated_secondary:    var(--secondary-saturated);
---white_dark-grey:                  var(--white);
---light-grey-2_dark-grey-2:         var(--light-grey-2);
---dark-grey-2_black:                var(--dark-grey-2);
---light-grey_dark-grey-1:           var(--light-grey);
---light-grey_clear:           var(--light-grey);
---light-grey-1_dark-grey:           var(--light-grey);
-}
-
-    </style>
+    :root {
+      --white_black: var(--white);
+      --primary-text-black_primary-text: var(--primary-text-black);
+      --purew_dark-grey: var(--purew);
+      --purew_black: var(--purew);
+      --purew_clear: var(--purew);
+      --light-grey-2_black: var(--light-grey-2);
+      --light-grey_dark-grey: var(--light-grey);
+      --light-grey-2_clear: var(--light-grey-2);
+      --white_dark-grey-1: var(--white);
+      --light-grey_dark-grey-2: var(--light-grey);
+      --light-grey-1_dark-grey-1: var(--light-grey-1);
+      --light-grey-1_dark-grey-2: var(--light-grey-1);
+      --light-grey-1_clear: var(--light-grey-1);
+      --light-grey-1_black: var(--light-grey-1);
+      --purew_pureb: var(--purew);
+      --secondary-saturated_secondary: var(--secondary-saturated);
+      --white_dark-grey: var(--white);
+      --light-grey-2_dark-grey-2: var(--light-grey-2);
+      --dark-grey-2_black: var(--dark-grey-2);
+      --light-grey_dark-grey-1: var(--light-grey);
+      --light-grey_clear: var(--light-grey);
+      --light-grey-1_dark-grey: var(--light-grey);
+    }
+  </style>
 </head>
 
 <body>
@@ -96,8 +95,7 @@
         <div class="gallery-controls" id="gallery-controls"><i class="fa-solid fa-arrow-circle-left"
             onclick="changeMedia(-1)"></i><i class="fa-solid fa-arrow-circle-right" onclick="changeMedia(1)"></i></div>
 
-        <img alt="Guide Front Page" class="media"
-          src="../assets/Teensy-Keyboard.png"></img>
+        <img alt="Guide Front Page" class="media" src="../assets/Teensy-Keyboard.png"></img>
       </div>
       <div class="overview">
         <h1>Overview</h1>
@@ -107,10 +105,12 @@
           the Teensy act as the USB device which would send those interpreted keys to the computer. This involved
           tearing down an old Chromebook, finding a compatible FPC connector and soldering it to a PCB.
           <br>
-          Although I did not do everything in this project and mostly followed a guide and recieved micro-soldering help, I did keenly understand the process and the complexities involved.
-          </p>
-          <p>
-          <a href="https://www.instructables.com/How-to-Make-a-USB-Laptop-Keyboard-Controller/"><i class="fa-solid fa-link"></i> Teensy USB Keyboard Guide</a>
+          Although I did not do everything in this project and mostly followed a guide and recieved micro-soldering
+          help, I did keenly understand the process and the complexities involved.
+        </p>
+        <p>
+          <a href="https://www.instructables.com/How-to-Make-a-USB-Laptop-Keyboard-Controller/"><i
+              class="fa-solid fa-link"></i> Teensy USB Keyboard Guide</a>
         </p>
 
 
@@ -119,23 +119,90 @@
     <div class="main-content">
       <h2>Tool Used</h2>
       <div class="tools-list">
-        <div><b>Lenovo Thinkpad 11e Chromebook</b> Keyboard Assembley</div>
+        <div><b>Lenovo Thinkpad 11e Chromebook</b> Keyboard Assembly</div>
         <div><b>Teensy 4.0</b>Micro-controller</div>
         <div><b>Arduino IDE</b>Code Editor</div>
         <div><b>Soldering Iron</b>Header Pin Soldering</div>
 
       </div>
 
+      <h2>Approach</h2>
+      <p>I first had to commit to opening up my Chromebook. Although it was old it still worked, and I knew tearing it
+        down could put it in an unrepairable state. Once I had made up my mind, I opened it and carefully pulled out the
+        keyboard.</p>
+      <p>Next, I needed to get the Teensy PCB ready. The guide linked a CAD file to print for the 4.0 so I sent it over
+        to a PCB printer and got the parts within a week. Although the guide suggested soldering the microcontroller
+        directly to minimise vertical height, I wanted to reuse the Teensy later so I soldered some female header pins
+        and attached it that way. The Teensy 4.0 also has pads on the underside, which are not exposed as thru-holes.
+        These pads are also used as the keyboard pins connect to the respective PCB pins from the FPC connector.
+        Unfortunately, I pulled a pad out by using too much heat, so I had to route the pin to an adjacent pad.</p>
+
+      <p>
+        The way a keyboard works is actually pretty simple. In general, its a 2D matrix of rails (say x and y), where
+        each key electrically sits at an intersection. When a key is pressed the two rails at that point are joined. A
+        controller which has access to all rails can then probe each x rail by pulling it HIGH, and listen on all the
+        y rails for a HIGH signal. If it finds one, then it has both the x and y coordinates of key pressed. If a map
+        of all the coordinates to ASCII keycodes is made, then a simple scanner script can effectively take keyboard
+        input.
+      </p>
+
+      <p>
+        The Teensy is special as it has the capability to register itself on a USB bus as an HID (Human Interface
+        Device).
+        This means connected hosts like desktops will treat it like an input device and with the right code, the Teensy
+        can emulate a keyboard.
+
+        The guide linked above already did all the hard work of writing the scanning script and even made scripts to
+        label keys easily, so all I had to do was flash through the code, set up the keyboard map and enjoy!
+      </p>
+
       <h2>Challenges</h2>
-      <p>I first had to commit to opening up my Chromebook. Although it was old it still worked, and I knew tearing it down could put it in an unrepairable state. Once I had made up my mind</p>
+      <p>
+        A significant hurdle was finding the right FPC connector. These connectors are far from standardised, and come
+        in varying pitches, types and heights. The part itself would cost pennies but finding the right one, and buying
+        in bulk + shipping was a headache.
+      </p>
+      <p>
+        So, as reccomended by the guide, I decided to just reuse the original FPC by desoldering it from the Chromebook
+        keyboard and resoldering onto the scanner PCB. "How hard could removing a tiny plastic component be?" - Very
+        hard... Without a hot air station and an aggressively hot soldering iron, it was inveitable that I would burn
+        the plastic and render both the connector and the laptop's keyboard input useless. I went and probed at the PFC
+        anyways and it melted.
+      </p>
+      <p>
+        (Now my Chromebook sits idly in the shelf, no way to replace ChromeOS either as recovery
+        mode requires a keyboard key!) I cut my losses, and accepted defeat. Soon after went to a laptop repair shop to
+        find an alternate FPC with the right pitch to harvest of off their scrap boards. Luckily they had a longer one
+        with the same pitch, so it was possible to connect my cable with some extra pins left next to it. This is what I
+        should have done from the start...
+      </p>
+      <p>
+      The second problem ended up destroying all further possiblities of this project. The pads on the kayboard's FPC
+      cable wore off with my repeated testing! I really should have seen this coming, but now, without a good
+      connection to the keyboard rails, the number of keys the Teensy can detect reliably is a whopping 5.
+      </p>
 
       <h2>Next Steps</h2>
-      <p>Firstly, I want to complete the guide. Its too good of a project to leave indefinitely in the unfinished
-        work-in-progress bin, and seems to have an actual deliverable (something not many of my projects have). Once I
-        finish writing all the projects and upload the example code to GitHub, I would like to start refining and
-        editing the content. Currently, it feels like everything is over-explained, but at the same time there is an
-        urge to fill in gaps between topics. I would like to work in a more streamlined manner to actually end up with
-        the booklet I had imagined, being a clear, crisp but detailed and interactive guide.
+      <p>
+        I really feel like someone should quote 'If it ain't broken, dont fix it', at the end of this journey.
+        Agreed, it was a disapointing end which sent both my Chromebook and its keyboard out of commission, but what I
+        gained was far more valuable. Opening and exploring laptop internals was extremely fun and this 'failure'
+        allowed my to build better intuitions and understand my limits when it comes to working with hardware. It gave
+        me an immense sense of accomplishment for the first few days when I was able to reliably use the keyboard for
+        data entry.
+        </p><p>
+        This project is almost certainly dead, as reviving the keyboard now would mean applying a solder
+        mask on the cable, and either directly soldering it to the PCB pads or still keeping the FPC connector in the
+        middle. It *might* be possible to expose the traces further down the cable, but thats at risk of even more
+        damage.
+        </p>
+        <p>
+        As for the Chromebook, hoping to be able to use it with the keyboard is pretty much out of the question,
+        but since I do have the keyboard mapping, I could completely desolder the melted FPC and short the pins for the
+        recovery key to flash Coreboot and get Debian running on it again. (I say again as I had managed to do so
+        before, but reverted to ChromeOS just before messing up the keyboard)
+        <p>
+        Now, if someone were to lend me a spare Chromebook 11e keyboard then the future would look a little brighter.
       </p>
     </div>
 

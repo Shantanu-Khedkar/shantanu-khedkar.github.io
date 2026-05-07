@@ -13,69 +13,69 @@
   <link rel="stylesheet" href="../prism/prism-gruvbox-dark.css">
   <script src="../prism/prism.js"></script>
   <link rel="stylesheet" href="../module.css">
-  <style id = "mainColors">
+  <style id="mainColors">
     :root {
-    --background-image:url("../assets/backgroundDark.j");
-  --background-image-v:url("../assets/backgroundDark-V.jeg");
-  
-  /* Main Colors */
-  --black:#101010;
-  --white:#f0f0f0;
-  --dark-grey:#232323;
-  --dark-grey-1: #3c3c3c;
-  --dark-grey-2: #4c4c4c;
-  --light-grey:#d9d9d9;
-  --light-grey-1:#c1c1c1;
-  --light-grey-2:#ababab;
-  --primary: #ff7800;
+      --background-image: url("../assets/backgroundDark.j");
+      --background-image-v: url("../assets/backgroundDark-V.jeg");
 
-  --primary-saturated: #ff9822;
-  --primary-text:#f1f1f1;
-  --primary-text-black:#010101;
-  --secondary:#b22645;
-  --secondary-saturated:#f6505d;
-  --purew:white;
-  --pureb:black;
-  --clear:rgba(0,0,0,0)
+      /* Main Colors */
+      --black: #101010;
+      --white: #f0f0f0;
+      --dark-grey: #232323;
+      --dark-grey-1: #3c3c3c;
+      --dark-grey-2: #4c4c4c;
+      --light-grey: #d9d9d9;
+      --light-grey-1: #c1c1c1;
+      --light-grey-2: #ababab;
+      --primary: #ff7800;
+
+      --primary-saturated: #ff9822;
+      --primary-text: #f1f1f1;
+      --primary-text-black: #010101;
+      --secondary: #b22645;
+      --secondary-saturated: #f6505d;
+      --purew: white;
+      --pureb: black;
+      --clear: rgba(0, 0, 0, 0)
     }
   </style>
   <style id="colorHandlers">
-:root {  
---white_black:                      var(--white);
---primary-text-black_primary-text:  var(--primary-text-black);
---purew_dark-grey:                  var(--purew);
---purew_black:                      var(--purew);
---purew_clear:                      var(--purew);
---light-grey-2_black:               var(--light-grey-2);
---light-grey_dark-grey:             var(--light-grey);
---light-grey-2_clear:               var(--light-grey-2);
---white_dark-grey-1:                var(--white);
---light-grey_dark-grey-2:           var(--light-grey);
---light-grey-1_dark-grey-1:         var(--light-grey-1);
---light-grey-1_dark-grey-2:         var(--light-grey-1);
---light-grey-1_clear:               var(--light-grey-1);
---light-grey-1_black:               var(--light-grey-1);
---purew_pureb:                      var(--purew);
---secondary-saturated_secondary:    var(--secondary-saturated);
---white_dark-grey:                  var(--white);
---light-grey-2_dark-grey-2:         var(--light-grey-2);
---dark-grey-2_black:                var(--dark-grey-2);
---light-grey_dark-grey-1:           var(--light-grey);
---light-grey_clear:           var(--light-grey);
---light-grey-1_dark-grey:           var(--light-grey);
-}
-
-    </style>
+    :root {
+      --white_black: var(--white);
+      --primary-text-black_primary-text: var(--primary-text-black);
+      --purew_dark-grey: var(--purew);
+      --purew_black: var(--purew);
+      --purew_clear: var(--purew);
+      --light-grey-2_black: var(--light-grey-2);
+      --light-grey_dark-grey: var(--light-grey);
+      --light-grey-2_clear: var(--light-grey-2);
+      --white_dark-grey-1: var(--white);
+      --light-grey_dark-grey-2: var(--light-grey);
+      --light-grey-1_dark-grey-1: var(--light-grey-1);
+      --light-grey-1_dark-grey-2: var(--light-grey-1);
+      --light-grey-1_clear: var(--light-grey-1);
+      --light-grey-1_black: var(--light-grey-1);
+      --purew_pureb: var(--purew);
+      --secondary-saturated_secondary: var(--secondary-saturated);
+      --white_dark-grey: var(--white);
+      --light-grey-2_dark-grey-2: var(--light-grey-2);
+      --dark-grey-2_black: var(--dark-grey-2);
+      --light-grey_dark-grey-1: var(--light-grey);
+      --light-grey_clear: var(--light-grey);
+      --light-grey-1_dark-grey: var(--light-grey);
+    }
+  </style>
 </head>
 
 <body>
-<div class="top-nav-wrapper" >
+  <div class="top-nav-wrapper">
     <div class="top-nav no-select" id="top-nav">
       <a div class="logo" href="../index.html"></a>
-      <div class="nav-shadow"  onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"></div>
+      <div class="nav-shadow" onclick="this.parentElement.classList.toggle('responsive-nav'); isOffscreen()"></div>
       <a class="nav-title" href="../projects.html">
-          <div class="nav-title-icon"><i class="fa-solid fa-arrow-circle-left"></i></div><span class="nav-title-label">Spark Cube</span>
-        </a>
+        <div class="nav-title-icon"><i class="fa-solid fa-arrow-circle-left"></i></div><span
+          class="nav-title-label">Spark Cube</span>
+      </a>
       <div class="nav-opt nav-title-opt" id="nav-opt" style="padding: 0px;">
       </div>
       <a id="menu-btn" style="display: none;"><br><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
@@ -83,62 +83,86 @@
         id="menu-btn-fixed"><i class="fa-solid fa-bars"></i></a>
 
 
-      <a class="menu-btn mobile-toggle" onclick="toggleTheme()"
-        id="mobile-toggle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
+      <a class="menu-btn mobile-toggle" onclick="toggleTheme()" id="mobile-toggle"><i class="fa-solid fa-sun"></i><i
+          class="fa-solid fa-moon"></i></a>
 
     </div>
   </div>
   <section class="project-viewer">
     <div class="gallery-wrapper">
-    <div class="gallery" id="gallery">
-      <div class="gallery-controls" id="gallery-controls"><i class="fa-solid fa-arrow-circle-left" onclick="changeMedia(-1)"></i><i class="fa-solid fa-arrow-circle-right" onclick="changeMedia(1)"></i></div>
-    <video alt="Spark-Cube Demo" class="media" src="../assets/projects/SparkCube/demo.mp4" autoplay="true" loop muted="true" controls></video>
-    <img alt="Cube Photo" class="media" src="../assets/projects/SparkCube/Spark-Cube.png" style="display:none"></img>
-    <img alt="CAD Model" class="media" src="../assets/projects/SparkCube/CAD1.png" style="display:none"></img>
-    <img alt="Spark Cube Logo" class="media" src="../assets/projects/SparkCube/SparkCubeLogo.png" style="display:none"></img>
-    </div>
-    <div class="overview">
-      <h1>Overview</h1>
-      <p><b>Spark Cube</b> is a 3x3 Rubik's Cube designed in <b>Tinkercad</b> from the ground up.<br> The cube is <b>functional</b> as it can indeed be scrambled and solved, hovewer it often gets stuck between turns.<br>
-        The cube is printed as 27 separate pieces including a core, which interlock together and can be rotated.<br> Held together by the centres which attach to the core using lego-like pegs that can spin, the other pieces are fit beneath the centres by their caps.<br>
-        Once the cube was printed and assembled, it was stickered with vinyl cut by a Cricut machine. Then, a logo was designed and printed to finish the branded look.
-      </p>
-        <p><a href="www.tinkercad.com/things/iGO4WmirfHz-3d-printed-spark-cube"><i class="fa-solid fa-link"></i> Tinkercad File</a></p>
+      <div class="gallery" id="gallery">
+        <div class="gallery-controls" id="gallery-controls"><i class="fa-solid fa-arrow-circle-left"
+            onclick="changeMedia(-1)"></i><i class="fa-solid fa-arrow-circle-right" onclick="changeMedia(1)"></i></div>
+        <video alt="Spark-Cube Demo" class="media" src="../assets/projects/SparkCube/demo.mp4" autoplay="true" loop
+          muted="true" controls></video>
+        <img alt="Cube Photo" class="media" src="../assets/projects/SparkCube/Spark-Cube.png"
+          style="display:none"></img>
+        <img alt="CAD Model" class="media" src="../assets/projects/SparkCube/CAD1.png" style="display:none"></img>
+        <img alt="Spark Cube Logo" class="media" src="../assets/projects/SparkCube/SparkCubeLogo.png"
+          style="display:none"></img>
+      </div>
+      <div class="overview">
+        <h1>Overview</h1>
+        <p><b>Spark Cube</b> is a 3x3 Rubik's Cube designed in <b>Tinkercad</b> from the ground up.<br> The cube is
+          <b>functional</b> as it can indeed be scrambled and solved, hovewer it often gets stuck between turns.<br>
+          The cube is printed as 27 separate pieces including a core, which interlock together and can be rotated.<br>
+          Held together by the centres which attach to the core using lego-like pegs that can spin, the other pieces are
+          fit beneath the centres by their caps.<br>
+          Once the cube was printed and assembled, it was stickered with vinyl cut by a Cricut machine. Then, a logo was
+          designed and printed to finish the branded look.
+        </p>
+        <p><a href="www.tinkercad.com/things/iGO4WmirfHz-3d-printed-spark-cube"><i class="fa-solid fa-link"></i>
+            Tinkercad File</a></p>
 
       </div>
     </div>
     <div class="main-content">
-<h2>Tool Used</h2>
+      <h2>Tool Used</h2>
       <div class="tools-list">
         <div><b>Tinkercad</b>Modelling & Design</div>
         <div><b>Prusa Mini</b>3D Printing</div>
         <div><b>Cricut</b>Vinyl Cutting</div>
-        
+
       </div>
-<h2>Inspiration</h2>
-<p>Ever since I got my first 3x3, I had been fascinated by its seemingly impossible mechanism that could move pieces across both axes.<br> 
-  This pull towards uncovering its inner workings lead me to taking apart many cubes and learing how the pieces interact with each other.<br>
-  Additionally, I had access to a 3D printer and a makerspace nearby, so I was excited to try it.
-</p>
+      <h2>Inspiration</h2>
+      <p>Ever since I got my first 3x3, I had been fascinated by its seemingly impossible mechanism that could move
+        pieces across both axes.<br>
+        This pull towards uncovering its inner workings lead me to taking apart many cubes and learing how the pieces
+        interact with each other.<br>
+        Additionally, I had access to a 3D printer and a makerspace nearby, so I was excited to try it.
+      </p>
 
-<h2>Approach</h2>
-<p>As mentioned earlier, I mostly tried working backwards from a disassembled off the shelf cube.<br>
-   I knew there would have been some explainer video or even 3D models of the pieces themselves online, but as a challange I decided not to use any external resources.
-  This allowed me to come up with my own design which worked on the same principles, but had a whole lot more problems and flaws that needed fixing.<br>
-  First, I drew a 2D representation of the system, which guided me to making the 3D models themselves.<br>
-Over the course of 4 months I printed many pieces, discovered and fixed problems like weak dowels, and learned the best orientation to print a particular piece so that overhang would be limited and the layers would not be easily separated during use.<br>
-I had to wrap up the project before I felt it was really done, as I didnt was easy access to printers towards the end. Hence, it feels unfinished, but I was able to print a set of all pieces and the core to assemble the very first prototype, which I subsequently stickered.</p>
+      <h2>Approach</h2>
+      <p>As mentioned earlier, I mostly tried working backwards from a disassembled off the shelf cube.<br>
+        I knew there would have been some explainer video or even 3D models of the pieces themselves online, but as a
+        challange I decided not to use any external resources.
+        This allowed me to come up with my own design which worked on the same principles, but had a whole lot more
+        problems and flaws that needed fixing.<br>
+        First, I drew a 2D representation of the system, which guided me to making the 3D models themselves.<br>
+        Over the course of 4 months I printed many pieces, discovered and fixed problems like weak dowels, and learned
+        the best orientation to print a particular piece so that overhang would be limited and the layers would not be
+        easily separated during use.<br>
+        I had to wrap up the project before I felt it was really done, as I didnt have easy access to printers towards
+        the end. Hence, it feels unfinished, but I was able to print a set of all pieces and the core to assemble the
+        very first prototype, which I subsequently stickered.</p>
 
-<h2>Next Steps</h2>
-<p>I wasn't new to Tinkercad, but I still had a difficult time especially in alignment of objects using the built in tool, and feel like more advanced software with precise controls like AutoCAD or Fusion360 would be better suited.<br>
-  The cube is way too loose and as a result it locks up between turns. I don't believe this is an inherent flaw in my design, but rather a collective set of problems like inconsistent prining, left on support material, and a lack of iterations in the design which minimise gap between pieces.<br>
-  The only was to fix these problems is to go through the intensive process of trial and error, which unfortunately isn't feasible anymore without a printer close by.
-  Overall I am pretty satisfied at the outcome, as all I initially inteded was to make a cube which could be solved, although I would love the chance to continue working on making it better.
-</p>      
+      <h2>Next Steps</h2>
+      <p>I wasn't new to Tinkercad, but I still had a difficult time especially in alignment of objects using the built
+        in tool, and feel like more advanced software with precise controls like AutoCAD or Fusion360 would be better
+        suited.<br>
+        The cube is way too loose and as a result it locks up between turns. I don't believe this is an inherent flaw in
+        my design, but rather a collective set of problems like inconsistent prining, left on support material, and a
+        lack of iterations in the design which minimise gap between pieces.<br>
+        The only was to fix these problems is to go through the intensive process of trial and error, which
+        unfortunately isn't feasible anymore without a printer close by.
+        Overall I am pretty satisfied at the outcome, as all I initially intended was to make a cube which could be
+        solved, although I would love the chance to continue working on making it better.
+      </p>
     </div>
-    </section>
+  </section>
 </body>
 
 <script src="../script.js"></script>
 <script src="../gallery.js"></script>
+
 </html>
