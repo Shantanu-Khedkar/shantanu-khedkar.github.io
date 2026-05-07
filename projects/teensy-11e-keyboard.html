@@ -105,7 +105,7 @@
           the Teensy act as the USB device which would send those interpreted keys to the computer. This involved
           tearing down an old Chromebook, finding a compatible FPC connector and soldering it to a PCB.
           <br>
-          Although I did not do everything in this project and mostly followed a guide and recieved micro-soldering
+          Although I did not do everything in this project myself and mostly followed a guide and recieved micro-soldering
           help, I did keenly understand the process and the complexities involved.
         </p>
         <p>
@@ -134,7 +134,7 @@
         to a PCB printer and got the parts within a week. Although the guide suggested soldering the microcontroller
         directly to minimise vertical height, I wanted to reuse the Teensy later so I soldered some female header pins
         and attached it that way. The Teensy 4.0 also has pads on the underside, which are not exposed as thru-holes.
-        These pads are also used as the keyboard pins connect to the respective PCB pins from the FPC connector.
+        These pads are also needed because the keyboard pins need to connect to the respective scanner PCB pins.
         Unfortunately, I pulled a pad out by using too much heat, so I had to route the pin to an adjacent pad.</p>
 
       <p>
@@ -163,10 +163,10 @@
         in bulk + shipping was a headache.
       </p>
       <p>
-        So, as reccomended by the guide, I decided to just reuse the original FPC by desoldering it from the Chromebook
+        So, as recommended by the guide, I decided to just reuse the original FPC by desoldering it from the Chromebook
         keyboard and resoldering onto the scanner PCB. "How hard could removing a tiny plastic component be?" - Very
-        hard... Without a hot air station and an aggressively hot soldering iron, it was inveitable that I would burn
-        the plastic and render both the connector and the laptop's keyboard input useless. I went and probed at the PFC
+        hard... Without a hot air station and an aggressively hot soldering iron, it was inevitable that I would burn
+        the plastic and render both the connector and the laptop's keyboard input useless. I went and probed at the FPC
         anyways and it melted.
       </p>
       <p>
@@ -177,31 +177,32 @@
         should have done from the start...
       </p>
       <p>
-      The second problem ended up destroying all further possiblities of this project. The pads on the kayboard's FPC
-      cable wore off with my repeated testing! I really should have seen this coming, but now, without a good
-      connection to the keyboard rails, the number of keys the Teensy can detect reliably is a whopping 5.
+        The second problem ended up destroying all further possibilities of this project. The pads on the keyboard's FPC
+        cable wore off with my repeated testing! I really should have seen this coming, but now, without a good
+        connection to the keyboard rails, the number of keys the Teensy can detect reliably is a whopping 5.
       </p>
 
       <h2>Next Steps</h2>
       <p>
-        I really feel like someone should quote 'If it ain't broken, dont fix it', at the end of this journey.
-        Agreed, it was a disapointing end which sent both my Chromebook and its keyboard out of commission, but what I
+        I really feel like someone should quote 'If it ain't broken, don't fix it', at the end of this journey.
+        Agreed, it was a disappointing end which sent both my Chromebook and its keyboard out of commission, but what I
         gained was far more valuable. Opening and exploring laptop internals was extremely fun and this 'failure'
         allowed my to build better intuitions and understand my limits when it comes to working with hardware. It gave
         me an immense sense of accomplishment for the first few days when I was able to reliably use the keyboard for
         data entry.
-        </p><p>
-        This project is almost certainly dead, as reviving the keyboard now would mean applying a solder
+      </p>
+      <p>
+        This project is likely certainly dead, as reviving the keyboard now would mean applying a solder
         mask on the cable, and either directly soldering it to the PCB pads or still keeping the FPC connector in the
-        middle. It *might* be possible to expose the traces further down the cable, but thats at risk of even more
+        middle. It *might* be possible to expose the traces further down the cable, but that's at risk of even more
         damage.
-        </p>
-        <p>
+      </p>
+      <p>
         As for the Chromebook, hoping to be able to use it with the keyboard is pretty much out of the question,
         but since I do have the keyboard mapping, I could completely desolder the melted FPC and short the pins for the
         recovery key to flash Coreboot and get Debian running on it again. (I say again as I had managed to do so
         before, but reverted to ChromeOS just before messing up the keyboard)
-        <p>
+      <p>
         Now, if someone were to lend me a spare Chromebook 11e keyboard then the future would look a little brighter.
       </p>
     </div>
