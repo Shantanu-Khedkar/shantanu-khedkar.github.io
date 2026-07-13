@@ -540,9 +540,9 @@ textarea:focus{
   font-size: 1em;
 }
 }
-@media only screen and (max-height: 450px) {
+/* @media only screen and (max-height: 450px) {
   .hero-section{
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   font-size: 0.8em;
   }
@@ -561,4 +561,4 @@ textarea:focus{
 .module-app{
 font-size: 0.5em;
 }
-}
+} */
